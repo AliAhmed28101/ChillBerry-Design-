@@ -1,3 +1,4 @@
+import Herosection from "./components/Herosection"
 import Navbar from "./components/navbar"
 
 function App() {
@@ -5,6 +6,7 @@ function App() {
   return (
     <>
       <Navbar />
+      <Herosection />
         
     </>
   )

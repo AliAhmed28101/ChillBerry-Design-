@@ -1,5 +1,69 @@
 @import "tailwindcss";
 
+
+
+@font-face {
+  font-family: Mazzard-Bold;
+  src: url(../src/assets/fonts/MazzardSoftH-Bold.otf) format("opentype");
+}
+
+@font-face {
+  font-family: Mazzard-Regular;
+  src: url(../src/assets/fonts/MazzardSoftH-Regular.otf) format("opentype");
+}
+
+@font-face {
+  font-family: Mazzard-SemiBold;
+  src: url(../src/assets/fonts/MazzardSoftH-SemiBold.otf) format("opentype");
+}
+
+@font-face {
+  font-family: Effolia-Black;
+  src: url(../src/assets/fonts/theeffolia-black.otf) format("opentype");
+}
+
+@font-face {
+  font-family: Effolia-Bold;
+  src: url(../src/assets/fonts/theeffolia-bold.otf) format("opentype");
+}
+
+@font-face {
+  font-family: Effolia-ExtraBold;
+  src: url(../src/assets/fonts/theeffolia-extrabold.otf) format("opentype");
+}
+
+@font-face {
+  font-family: Effolia-Medium;
+  src: url(../src/assets/fonts/theeffoliascale-medium.otf) format("opentype");
+}
+
+@font-face {
+  font-family: Effolia-Regular;
+  src: url(../src/assets/fonts/theeffoliascale-regular.otf) format("opentype");
+}
+
+@font-face {
+  font-family: Effolia-SemiBold;
+  src: url(../src/assets/fonts/theeffoliascale-semibold.otf) format("opentype");
+}
+
+
+@font-face {
+  font-family: Schotis-Black;
+  src: url(../src/assets/fonts/theeffolia-black.otf) format("opentype");
+}
+
+@font-face {
+  font-family: Schotis-Bold;
+  src: url(../src/assets/fonts/SchotisText-Bold.otf) format("opentype");
+}
+
+@font-face {
+  font-family: Schotis-SemiBold;
+  src: url(../src/assets/fonts/SchotisText-SemiBold.otf);
+}
+
+
 @theme {
 
   --color-sharp-pink: #ff3683;
@@ -7,5 +71,27 @@
   --color-light-cement: #b7a69c;
   --color-chocolate-brown: #1c0902;
 
-}
 
+  --font-Mazzard-Bold: Mazzard-Bold, "sans-serif";
+  --font-Mazzard-Regular: Mazzard-Regular, "sans-serif";
+  --font-Mazzard-SemiBold: Mazzard-SemiBold, "sans-serif";
+
+
+  --font-Effolia-Black: Effolia-Black, "sans-serif";
+  --font-Effolia-Bold: Effolia-Bold, "sans-serif";
+  --font-Effolia-Extra-Bold: Effolia-ExtraBold, "sans-serif";
+  --font-Effolia-Medium: Effolia-Medium, "sans-serif";
+  --font-Effolia-Regular: Effolia-Regular, "sans-serif";
+  --font-Effolia-Semi-Bold: Effolia-SemiBold, "sans-serif";
+
+  --font-Schotis-Black: Schotis-Black, "sans-serif";
+  --font-Schotis-Bold: Schotis-Bold, "sans-serif";
+  --font-Schotis-SemiBold: Schotis-SemiBold, "sans-serif";
+
+
+
+
+
+
+
+}
