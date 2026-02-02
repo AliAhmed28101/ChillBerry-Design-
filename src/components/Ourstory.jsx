@@ -2,9 +2,9 @@ import React from 'react'
 
 const Ourstory = () => {
   return (
-    <div className='maincontainer relative w-full h-full flex '>
+    <div className='maincontainer relative w-full h-full flex mb-0 pb-0 '>
 
-      <div className='lefty flex flex-col '>
+      <div className='lefty flex flex-col mb-0 pb-0 '>
         <div className='cone py-24'>
           <img
             className='w-65 h-65 object-contain -translate-x-2.5'
@@ -29,7 +29,7 @@ const Ourstory = () => {
         </div>
       </div>
 
-      <div className='mid flex flex-col py-16 items-center px-8 mr-0 pr-7  justify-center '>
+      <div className='mid flex flex-col py-16 items-center px-8 mr-0 pr-7 mb-0  pb-0 justify-center '>
         <div className='textbox'>
           <span className='px-26 pr-0 py-20 pb-0'>
             <p className='font-Mazzard-Regular text-sharp-pink text-sm text-center'>
@@ -66,7 +66,7 @@ const Ourstory = () => {
 
 
 
-      <div className='Righty py-70 px-14 pr-0 relative pb-0  pl-0'>
+      <div className='Righty py-70 px-14 pr-0 relative pb-0 mb-0 pl-0'>
         <h2 className='font-Schotis-Bold tracking-wider text-lg'>
           Joy in Every Scoop
         </h2>
