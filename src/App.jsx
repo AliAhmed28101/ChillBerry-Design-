@@ -1,5 +1,6 @@
 import Herosection from "./components/Herosection"
 import Navbar from "./components/navbar"
+import Ourstory from "./components/Ourstory"
 
 function App() {
 
@@ -7,6 +8,8 @@ function App() {
     <>
       <Navbar />
       <Herosection />
+
+      <Ourstory />
         
     </>
   )

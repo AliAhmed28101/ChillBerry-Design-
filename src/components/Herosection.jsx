@@ -19,8 +19,8 @@ const Herosection = () => {
 
     const boxDimensions = {
         box1: "h-[470px] w-[510px]",
-        box2: "h-[750px] w-[800px]",
-        box3: "h-[850px] w-[850px]",
+        box2: "h-[750px] w-[798px]",
+        box3: "h-[798px] w-[798px]",
         box4: "h-[650px] w-[650px]",
     };
 
@@ -31,7 +31,7 @@ const Herosection = () => {
     return (
 
 
-        <div className='maincontainer w-full flex gap-96 bg-baby-pink text-black pb-22'>
+        <div className='maincontainer min-w-full  flex gap-96 bg-baby-pink text-black pb-11'>
 
 
             <div className='left relative py-20'>
