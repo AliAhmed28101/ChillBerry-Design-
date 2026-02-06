@@ -6,8 +6,8 @@ const Footer = () => {
 
 
 
-            <div className='diagonalbox absolute px-250 py-7'>
-                <div className='diagonal  bg-lightblack  px-35  py-27 rounded-3xl -rotate-26 translate-x-42'>
+            <div className='diagonalbox absolute right-0  py-3.5  '>
+                <div className='diagonal  bg-lightblack px-47 py-26 rounded-3xl -rotate-22 translate-x-40'>
                 </div>
             </div>
 
@@ -35,7 +35,7 @@ const Footer = () => {
 
 
             <div className="navigation hidden lg:flex justify-center py-13">
-                <ul className="text-white">
+                <ul className="text-white   ">
                     <li className="flex gap-8 font-Mazzard-Regular text-sm">
                         <a className="hover:text-sharp-pink transition-all" href="/">Home</a>
                         <a className="hover:text-sharp-pink transition-all" href="about-us">About Us</a>

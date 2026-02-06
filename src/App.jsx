@@ -1,3 +1,4 @@
+import Contactus from "./components/Contactus"
 import Footer from "./components/Footer"
 import Herosection from "./components/Herosection"
 import Navbar from "./components/Navbar"
@@ -17,6 +18,9 @@ function App() {
         <Ourflavors />
 
         <SpecialOffers />
+
+
+        <Contactus />
 
         <Footer />
         

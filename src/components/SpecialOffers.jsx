@@ -175,7 +175,7 @@ const SpecialOffers = () => {
             <div className='right relative w-[45%] h-full '>
 
                 {/* IMAGE WRAPPER */}
-                <div className='absolute right-3 top-1/2 -translate-y-60'>
+                <div className='absolute right-3 top-1/2 -translate-y-63.5'>
                     <img
                         src="/images/section4/glass.png"
                         alt=""
