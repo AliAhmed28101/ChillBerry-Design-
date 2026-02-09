@@ -194,7 +194,7 @@ const Contactus = () => {
 
 
 
-                <form onSubmit={handleSubmit} className='form flex flex-col text-white  w-127 gap-4 h-77 rounded-2xl bg-black/50 backdrop-blur-xs'>
+                <form onSubmit={handleSubmit} className='form flex flex-col text-white  w-128 gap-4 h-77 rounded-2xl bg-black/50 backdrop-blur-xs'>
 
 
                     <div className='flex px-12 gap-7 py-8 pb-0 '>

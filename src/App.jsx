@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar"
 import Ourflavors from "./components/Ourflavors"
 import Ourstory from "./components/Ourstory"
 import SpecialOffers from "./components/SpecialOffers"
+import Testimonials from "./components/Testimonials"
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
 
         <SpecialOffers />
 
+        <Testimonials/>
 
         <Contactus />
 
