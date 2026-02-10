@@ -60,10 +60,10 @@ const Testimonials = () => {
             <div className="starting flex flex-col py-16 items-center relative pb-50">
                 {/* Header Text */}
                 <div className="textbox translate-x-45">
-                    <div className="font-Mazzard-Regular text-sharp-pink text-sm uppercase tracking-widest">
-                        Testimonials
-                        <div className="py-3.5 text-black font-Schotis-Bold text-4xl tracking-wide">
-                            <h5>What's Our Client Say</h5>
+                    <div className="font-Mazzard-Regular text-sharp-pink text-sm">
+                        TESTIMONIALS
+                        <div className="py-3.5 text-black font-Schotis-Bold text-3xl tracking-wide">
+                            <p>What's Our Client Say</p>
                         </div>
                     </div>
                 </div>
@@ -150,12 +150,6 @@ const Testimonials = () => {
                                     </div>
 
 
-
-
-
-
-
-
                                 </div>
 
                             ))}
@@ -179,7 +173,7 @@ const Testimonials = () => {
                             onClick={prevSlide}
                             className="absolute top-1/2 -translate-y-1/2 -left-5 z-50 cursor-pointer"
                         >
-                            <span className="flex items-center justify-center w-10 h-10 rounded-full bg-gray-900 hover:bg-gray-800 text-white shadow-lg">
+                            <span className="flex items-center justify-center w-10 h-10 rounded-full bg-gray-900 hover:bg-sharp-pink text-white shadow-lg">
                                 <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7" />
                                 </svg>
@@ -192,7 +186,7 @@ const Testimonials = () => {
                             onClick={nextSlide}
                             className="absolute top-1/2 -translate-y-1/2 -right-5 z-50 cursor-pointer"
                         >
-                            <span className="flex items-center justify-center w-10 h-10 rounded-full bg-sharp-pink hover:bg-sharp-pink/90 text-white shadow-lg">
+                            <span className="flex items-center justify-center w-10 h-10 rounded-full bg-gray-900 hover:bg-sharp-pink text-white shadow-lg">
                                 <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
                                 </svg>

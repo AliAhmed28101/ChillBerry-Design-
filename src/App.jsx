@@ -4,6 +4,7 @@ import Herosection from "./components/Herosection"
 import Navbar from "./components/Navbar"
 import Ourflavors from "./components/Ourflavors"
 import Ourstory from "./components/Ourstory"
+import Social from "./components/Social"
 import SpecialOffers from "./components/SpecialOffers"
 import Testimonials from "./components/Testimonials"
 
@@ -16,16 +17,18 @@ function App() {
 
       <Ourstory />
 
-        <Ourflavors />
+      <Ourflavors />
 
-        <SpecialOffers />
+      <SpecialOffers />
 
-        <Testimonials/>
+      <Testimonials />
 
-        <Contactus />
+      <Contactus />
 
-        <Footer />
-        
+      <Social />
+
+      <Footer />
+
     </>
   )
 }
