@@ -1,5 +1,6 @@
 import Contactus from "./components/Contactus"
 import Footer from "./components/Footer"
+import Gallery from "./components/Gallery"
 import Herosection from "./components/Herosection"
 import Navbar from "./components/Navbar"
 import Ourflavors from "./components/Ourflavors"
@@ -20,6 +21,8 @@ function App() {
       <Ourflavors />
 
       <SpecialOffers />
+
+      <Gallery />
 
       <Testimonials />
 

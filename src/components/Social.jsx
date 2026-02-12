@@ -43,7 +43,7 @@ const Social = () => {
                     {/* CAROUSEL */}
                     <div
                         ref={carouselRef}
-                        className="carousel w-full rounded-box overflow-hidden scroll-smooth flex h-110"
+                        className="carousel w-full overflow-hidden scroll-smooth flex h-110"
                     >
                         {images.map((item, index) => (
                             <div key={index} className="carousel-item w-1/4">
@@ -52,14 +52,14 @@ const Social = () => {
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     draggable="false"
-                                    className="relative block w-full h-full overflow-hidden group cursor-pointer transition-transform duration-300 hover:scale-105 hover:z-10"
+                                    className="relative block w-full h-full overflow-hidden group cursor-pointer hover:z-10"
                                 >
                                     {/* IMAGE */}
                                     <img
                                         src={item.img}
                                         alt=""
                                         draggable="false"
-                                        className="w-full h-full object-cover"
+                                        className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                                     />
 
                                     {/* OVERLAY */}
@@ -106,11 +106,11 @@ const Social = () => {
                 </div>
 
                 {/* CTA BUTTON */}
-                <div className="py-11">
+                <div className="py-11 flex">
                     <button
                         type="button"
                         onClick={() => alert("Order Now")}
-                        className="flex items-center justify-center gap-1 font-Mazzard-Regular text-white text-sm bg-sharp-pink px-6 py-2.5 rounded-4xl hover:cursor-pointer"
+                        className="inline-flex items-center justify-center gap-1 font-Mazzard-Regular text-white text-sm bg-sharp-pink px-6 py-2.5 rounded-4xl hover:cursor-pointer"
                     >
                         Order Now
                         <img className="h-3 invert" src="next.svg" alt="next" />

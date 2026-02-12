@@ -6,7 +6,7 @@ const Ourflavors = () => {
 
       <div className='start flex flex-col py-16 items-center px-8 mr-0 pr-7  pb-0 justify-center'>
         <div className='textbox'>
-          <span className='px-26 pr-0 py-20 pb-0'>
+          <span className='px-26 pr-0 pb-0'>
             <p className='font-Mazzard-Regular text-sharp-pink text-sm text-center'>
               OUR FLAVORS
             </p>

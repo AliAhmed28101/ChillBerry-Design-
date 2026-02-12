@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react'
 const SpecialOffers = () => {
 
 
-    const targetTime = new Date("2026-02-10T23:59:59").getTime()
+    const targetTime = new Date("2026-02-18T23:59:59").getTime()
 
     const [timeLeft, setTimeLeft] = useState({
         days: "00",
