@@ -31,26 +31,26 @@ const Herosection = () => {
     return (
 
 
-        <div className='maincontainer min-w-full  flex gap-96 bg-baby-pink text-black pb-11'>
+        <main className='maincontainer min-w-full  flex gap-96 bg-baby-pink text-black pb-11'>
 
 
             <div className='left relative py-20'>
                 <div className='textbox absolute z-10  px-44 py-8'>
-                    <div className=' w-3xl'>
+
+                    <section className=' w-3xl'>
 
                         <h1 className='text-7xl tracking-wider font-Schotis-SemiBold'>Freeze the <br /> Moment</h1>
 
-                        <div className='paratext py-6 w-114 font-Mazzard-Regular text-sm text-gray-500'>
+                        <section className='paratext py-6 w-114 font-Mazzard-Regular text-sm text-gray-500'>
 
                             <p>Every scoop tells a story—of laughter, sunshine and sweet <br /> memories. At our creamery, we don't just serve ice cream; <br /> we capture life's little joys in every swirl and sprinkle.</p>
 
-                        </div>
+                        </section>
 
-                    </div>
+                    </section>
 
 
-                    <div className="button ">
-
+                    <section className="button ">
 
 
                         <button type="button" onClick={() => alert("View Menu")} className=" flex items-center justify-center gap-1 font-Mazzard-Regular text-white text-sm bg-sharp-pink px-6 py-2.5 rounded-4xl hover:cursor-pointer">
@@ -61,54 +61,52 @@ const Herosection = () => {
                         </button>
 
 
-                    </div>
+                    </section>
 
 
                     <div className='itemboxes flex gap-4 py-12 px-3'>
 
 
-                        <div onClick={() => setActiveItem("box1")} className={`item box1 flex flex-col justify-center items-center rounded-3xl  cursor-pointer px-3 pt-1   ${ActiveItem === "box1" ? "bg-white" : ""} `}>
+                        <section onClick={() => setActiveItem("box1")} className={`item box1 flex flex-col justify-center items-center rounded-3xl  cursor-pointer px-3 pt-1   ${ActiveItem === "box1" ? "bg-white" : ""} `}>
                             <img className='w-9 h-9' src="/images/section1/TwistTemptation.png" alt="" />
-
 
                             <div className='text-sm text-center mt-6 font-Mazzard-Regular text-gray-800'>
 
                                 Twist <br /> Temptation
 
                             </div>
-                        </div>
+
+                        </section>
 
 
 
-                        <div onClick={() => setActiveItem("box2")} className={`item box2  flex flex-col justify-center items-center rounded-3xl  cursor-pointer px-3 pt-1 ${ActiveItem === "box2" ? "bg-white" : ""}  `}>
+                        <section onClick={() => setActiveItem("box2")} className={`item box2  flex flex-col justify-center items-center rounded-3xl  cursor-pointer px-3 pt-1 ${ActiveItem === "box2" ? "bg-white" : ""}  `}>
                             <img className='w-15 h-15' src="/images/section1/chillychoc.png" alt="" />
 
                             <div className='text-sm text-center py-3 font-Mazzard-Regular text-gray-800'>
                                 chilly- <br /> chocolate
                             </div>
-                        </div>
+                        </section>
 
 
 
-                        <div onClick={() => setActiveItem("box3")} className={`item box3 flex flex-col justify-center items-center rounded-3xl  cursor-pointer px-3 pt-1 ${ActiveItem === "box3" ? "bg-white" : ""} `}>
+                        <section onClick={() => setActiveItem("box3")} className={`item box3 flex flex-col justify-center items-center rounded-3xl  cursor-pointer px-3 pt-1 ${ActiveItem === "box3" ? "bg-white" : ""} `}>
                             <img className='w-15 h-15' src="/images/section1/chocalmonds.png" alt="" />
 
                             <div className='text-sm text-center py-3 font-Mazzard-Regular text-gray-800'>
                                 chocolate <br /> almond
                             </div>
-                        </div>
+                        </section>
 
 
 
-                        <div onClick={() => setActiveItem("box4")} className={`item box4 flex flex-col justify-center items-center rounded-3xl  cursor-pointer px-3 pt-1 ${ActiveItem === "box4" ? "bg-white" : ""} `}>
+                        <section onClick={() => setActiveItem("box4")} className={`item box4 flex flex-col justify-center items-center rounded-3xl  cursor-pointer px-3 pt-1 ${ActiveItem === "box4" ? "bg-white" : ""} `}>
                             <img className='w-15 h-15' src="/images/section1/deliciouschoc.png" alt="" />
 
                             <div className='text-sm text-center py-3 font-Mazzard-Regular text-gray-800'>
                                 delicious <br /> chocolate
                             </div>
-                        </div>
-
-
+                        </section>
 
 
                     </div>
@@ -118,17 +116,13 @@ const Herosection = () => {
 
 
 
-                <div className='boxes'>
+               
 
 
-
-                </div>
-
-
-                <div className='diagonalparent py-4 '>
+                <section className='diagonalparent py-4 '>
                     <div className='diagonal  bg-white  px-39.5  py-37 rounded-4xl rotate-22 -translate-x-20'>
                     </div>
-                </div>
+                </section>
 
 
 
@@ -148,30 +142,23 @@ const Herosection = () => {
             <div className='right py-15 px-8'>
                 <div className='CementBackground relative bg-light-cement py-62 w-full px-55  rounded-[95px] flex items-center justify-center'>
 
-                    <div className={`absolute translate-y-10 flex items-center justify-center transition-all duration-300 ${boxDimensions[ActiveItem]}`}>
+                    <section className={`absolute translate-y-10 flex items-center justify-center transition-all duration-300 ${boxDimensions[ActiveItem]}`}>
                         <img
                             className='max-w-full max-h-full object-contain'
                             src={images[ActiveItem]}
                             alt={ActiveItem}
                         />
-                    </div>
+                    </section>
 
 
 
 
-
-
-
-
-
-
-
-                    <div className="absolute bottom-0 right-0 translate-x-1/3 translate-y-1/5 bg-white w-38 h-38 rounded-3xl shadow-xl z-10 flex flex-col items-center">
+                    <section className="absolute bottom-0 right-0 translate-x-1/3 translate-y-1/5 bg-white w-38 h-38 rounded-3xl shadow-xl z-10 flex flex-col items-center">
                         <div className="text-sm font-Mazzard-Regular py-12 pb-4">Follow us on
                         </div>
 
 
-                        <div className='flex gap-3 items-start '>
+                        <section className='flex gap-3 items-start '>
 
 
 
@@ -245,10 +232,10 @@ const Herosection = () => {
                                 </svg>
                             </a>
 
-                        </div>
+                        </section>
 
 
-                    </div>
+                    </section>
 
 
 
@@ -260,7 +247,7 @@ const Herosection = () => {
             </div>
 
 
-        </div>
+        </main>
 
 
 

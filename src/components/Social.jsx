@@ -27,7 +27,7 @@ const Social = () => {
     ]
 
     return (
-        <div className="maincontainer w-full h-177">
+        <div className="maincontainer w-full h-182">
             <div className="flex flex-col items-center justify-center">
 
                 {/* TITLE */}

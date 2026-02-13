@@ -32,13 +32,13 @@ const Gallery = () => {
     ]
 
     return (
-        <div className='maincontainer w-full h-full bg-baby-pink'>
+        <main className='maincontainer w-full h-155 bg-baby-pink '>
 
             <div className='start flex flex-col py-22 items-center px-8 mr-0 pr-7  pb-0 justify-center'>
 
 
                 <div className='textbox flex items-center justify-center'>
-                    <span className='content'>
+                    <section className='content'>
                         <p className='font-Mazzard-Regular text-sharp-pink text-sm text-center'>
                             GALLERY
                         </p>
@@ -46,14 +46,13 @@ const Gallery = () => {
 
                         <div className='py-3.5'>
                             <span className='font-Schotis-Bold text-3xl tracking-wide'>
+
                                 <h5 className='px-8'>Ice Cream Moments</h5>
 
                             </span>
                         </div>
 
-                    </span>
-
-
+                    </section>
 
                 </div>
 
@@ -65,7 +64,7 @@ const Gallery = () => {
                         className="carousel w-full overflow-hidden scroll-smooth flex h-70 gap-4 "
                     >
                         {images.map((item, index) => (
-                            <div key={index} className="carousel-item flex-shrink-0 basis-[calc((100%-4rem)/5)] rounded-2xl overflow-hidden">
+                            <section key={index} className="carousel-item flex-shrink-0 basis-[calc((100%-4rem)/5)] rounded-2xl overflow-hidden">
                                 <a
 
                                     target="_blank"
@@ -98,7 +97,7 @@ const Gallery = () => {
 
 
                                 </a>
-                            </div>
+                            </section>
                         ))}
                     </div>
 
@@ -130,7 +129,7 @@ const Gallery = () => {
                 </div>
 
                 {/* CTA BUTTON */}
-                <div className="py-11 flex">
+                <section className="py-6 flex">
                     <button
                         type="button"
                         onClick={() => alert("View Menu")}
@@ -139,20 +138,14 @@ const Gallery = () => {
                         View Menu
                         <img className="h-3 invert" src="next.svg" alt="next" />
                     </button>
-                </div>
-
-
-
-
-
-
+                </section>
 
 
 
 
             </div>
 
-        </div>
+        </main>
 
 
 
