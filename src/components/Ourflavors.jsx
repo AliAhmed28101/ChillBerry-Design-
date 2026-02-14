@@ -29,7 +29,7 @@ const Ourflavors = () => {
 
   return (
     <main
-      className="w-full bg-baby-pink py-16 px-8 flex flex-col items-center"
+      className="w-full bg-baby-pink py-16 px-8 flex flex-col items-center h-full pb-11"
       aria-labelledby="our-flavors-heading"
     >
       <header className="text-center max-w-3xl">
@@ -45,34 +45,57 @@ const Ourflavors = () => {
         </h2>
       </header>
 
-      <div className="relative max-w-6xl w-full mx-auto py-8 px-4">
+      <div className="relative max-w-310 w-full mx-auto py-8 px-4">
 
         <div
           ref={carouselRef}
-          className="w-full overflow-hidden flex scroll-smooth gap-4"
+          className="w-full overflow-hidden flex scroll-smooth gap-3"
         >
           {images.map((item, index) => (
 
             <div key={index} className='flex flex-col' style={{ flex: "0 0 calc((100% - 3rem) / 4)" }}>
 
-              <div className="bg-white flex justify-center items-center cursor-pointer">
-                <div className="relative w-65 h-65">
+              {/* ⬆️ Increased image container height: was w-65 h-65, now w-full h-96 */}
+              <div className="bg-white flex justify-center items-center cursor-pointer h-92">
+                <div className="relative w-full h-65">
+
+
+                  <div className='leftcorner absolute left-4  bg-sharp-pink text-white  h-5.5 top-0 w-13  rounded-2xl -translate-y-9 flex items-center justify-center font-Schotis-Light text-sm '>
+                    sale
+                  </div>
+
+
+                  <div className='rightcorner absolute right-4  '>
+
+                    <div className='flex flex-col'>
+
+                      <img src=" " alt=" " />
+
+                      <img src=" " alt=" " />
+
+                      <img src=" " alt=" " />
+
+
+                    </div>
+
+
+                  </div>
+
+
                   <img
                     src={item.img}
                     alt=""
                     draggable="false"
-                    className="w-full h-full object-cover transition-transform duration-300"
+                    className="absolute translate-y-2 w-full h-full object-cover transition-transform duration-300 "
                   />
                 </div>
               </div>
 
-              <div className='py-4 flex flex-col justify-center items-center pb-0'>
+              <div className='py-7 flex flex-col justify-center items-center pb-0'>
                 <p className='font-Schotis-SemiBold text-md'>
                   Creamy Vanilla Bean
                 </p>
               </div>
-
-
 
               {/* ⭐ Dynamic Ratings */}
               <div className='ratings flex gap-1 justify-center items-center py-1.5 pb-0'>
@@ -96,11 +119,10 @@ const Ourflavors = () => {
                 )}
 
                 <span
-                  className={`price2 absolute font-Mazzard-SemiBold text-xs translate-y-2 ${
-                    item.price1
-                      ? 'translate-x-6'
-                      : 'left-1/2 -translate-x-1/2'
-                  }`}
+                  className={`price2 absolute font-Mazzard-SemiBold text-xs translate-y-2 ${item.price1
+                    ? 'translate-x-6'
+                    : 'left-1/2 -translate-x-1/2'
+                    }`}
                 >
                   {item.price2}
                 </span>
@@ -116,10 +138,10 @@ const Ourflavors = () => {
         <button
           type="button"
           onClick={prevSlide}
-          className="absolute top-1/2 -translate-y-1/2 left-0 -translate-x-15 z-50 cursor-pointer"
+          className="absolute top-60 -translate-y-10 left-0 -translate-x-9 z-50 cursor-pointer"
         >
-          <span className="flex items-center justify-center w-10 h-10 rounded-full border border-gray-900 group hover:border-sharp-pink shadow-lg">
-            <svg className="w-5 h-5 text-gray-900 group-hover:text-sharp-pink" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <span className="flex items-center justify-center w-9 h-9 rounded-full border border-gray-900 group hover:border-sharp-pink shadow-lg">
+            <svg className="w-4 h-4 text-gray-900 group-hover:text-sharp-pink" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7" />
             </svg>
           </span>
@@ -129,10 +151,10 @@ const Ourflavors = () => {
         <button
           type="button"
           onClick={nextSlide}
-          className="absolute top-1/2 -translate-y-1/2 right-0 translate-x-15 z-50 cursor-pointer"
+          className="absolute top-60  -translate-y-10 right-0 translate-x-9 z-50 cursor-pointer"
         >
-          <span className="flex items-center justify-center w-10 h-10 rounded-full border border-gray-900 group hover:border-sharp-pink shadow-lg">
-            <svg className="w-5 h-5 text-gray-900 group-hover:text-sharp-pink" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <span className="flex items-center justify-center w-9 h-9 rounded-full border border-gray-900 group hover:border-sharp-pink shadow-lg">
+            <svg className="w-4 h-4 text-gray-900 group-hover:text-sharp-pink" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
             </svg>
           </span>
@@ -144,18 +166,3 @@ const Ourflavors = () => {
 }
 
 export default Ourflavors
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

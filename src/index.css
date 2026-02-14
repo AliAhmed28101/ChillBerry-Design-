@@ -51,8 +51,24 @@
 
 
 @font-face {
+  font-family: Schotis-Regular;
+  src: url(../src/assets/fonts/SchotisText.otf);
+}
+
+@font-face {
   font-family: Schotis-Black;
-  src: url(../src/assets/fonts/theeffolia-black.otf) format("opentype");
+  src: url(../src/assets/fonts/SchotisText-Black.otf) format("opentype");
+}
+
+@font-face {
+  font-family: Schotis-Book;
+  src: url(../src/assets/fonts/SchotisText-Book.otf);
+}
+
+
+@font-face {
+  font-family: Schotis-Light;
+  src: url(../src/assets/fonts/SchotisText-Light.otf);
 }
 
 @font-face {
@@ -88,14 +104,12 @@
   --font-Effolia-Regular: Effolia-Regular, "sans-serif";
   --font-Effolia-Semi-Bold: Effolia-SemiBold, "sans-serif";
 
+  --font-Schotis-Regular: Schotis-Regular, "sans-serif";
+  --font-Schotis-Book: Schotis-Book, "sans-serif"
   --font-Schotis-Black: Schotis-Black, "sans-serif";
   --font-Schotis-Bold: Schotis-Bold, "sans-serif";
+  --font-Schotis-Light: Schotis-Light, "sans-serif";
   --font-Schotis-SemiBold: Schotis-SemiBold, "sans-serif";
 
-
-
-
-
-
-
+  
 }

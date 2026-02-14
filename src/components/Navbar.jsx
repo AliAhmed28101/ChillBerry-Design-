@@ -14,10 +14,10 @@ const Navbar = () => {
                     </div>
 
                     <div className="flex text-xl justify-center items-center">
-                        <span className="font-semibold font-Schotis-Black">
+                        <span className=" font-Schotis-Bold">
                             Chill
                         </span>
-                        <span className="text-sharp-pink font-Schotis-Black">
+                        <span className="text-sharp-pink font-Schotis-Bold">
                             berry
                         </span>
                     </div>
@@ -64,7 +64,6 @@ const Navbar = () => {
 }
 
 export default Navbar
-
 
 
 
