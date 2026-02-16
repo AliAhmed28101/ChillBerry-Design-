@@ -2,20 +2,18 @@ import React, { useRef } from 'react'
 
 const Gallery = () => {
 
-
-
     const carouselRef = useRef(null)
 
     const nextSlide = () => {
         if (!carouselRef.current) return
-        const itemWidth = carouselRef.current.offsetWidth / 4
-        carouselRef.current.scrollBy({ left: itemWidth, behavior: 'smooth' })
+        const containerWidth = carouselRef.current.offsetWidth
+        carouselRef.current.scrollBy({ left: containerWidth, behavior: 'smooth' })
     }
 
     const prevSlide = () => {
         if (!carouselRef.current) return
-        const itemWidth = carouselRef.current.offsetWidth / 4
-        carouselRef.current.scrollBy({ left: -itemWidth, behavior: 'smooth' })
+        const containerWidth = carouselRef.current.offsetWidth
+        carouselRef.current.scrollBy({ left: -containerWidth, behavior: 'smooth' })
     }
 
     const images = [
@@ -36,29 +34,22 @@ const Gallery = () => {
 
             <div className='start flex flex-col py-22 items-center px-8 mr-0 pr-7  pb-0 justify-center'>
 
-
                 <div className='textbox flex items-center justify-center'>
                     <section className='content'>
                         <p className='font-Mazzard-Regular text-sharp-pink text-sm text-center'>
                             GALLERY
                         </p>
 
-
                         <div className='py-3.5'>
                             <span className='font-Schotis-Bold text-3xl tracking-wide'>
-
                                 <h5 className='px-8'>Ice Cream Moments</h5>
-
                             </span>
                         </div>
-
                     </section>
-
                 </div>
 
                 <div className="relative w-full mx-auto py-5">
 
-                    {/* CAROUSEL */}
                     <div
                         ref={carouselRef}
                         className="carousel w-full overflow-hidden scroll-smooth flex h-70 gap-4 "
@@ -66,13 +57,11 @@ const Gallery = () => {
                         {images.map((item, index) => (
                             <section key={index} className="carousel-item flex-shrink-0 basis-[calc((100%-4rem)/5)] rounded-2xl overflow-hidden">
                                 <a
-
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     draggable="false"
                                     className="relative block w-full h-full overflow-hidden group cursor-pointer hover:z-10"
                                 >
-                                    {/* IMAGE */}
                                     <img
                                         src={item.img}
                                         alt=""
@@ -80,7 +69,6 @@ const Gallery = () => {
                                         className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                                     />
 
-                                    {/* TEXT OVER IMAGE */}
                                     <div className="absolute bottom-4 left-4 right-4 z-20 text-white opacity-0 group-hover:opacity-100">
                                         <span className="bg-lightblack/60 px-2 py-1 text-md rounded-md font-Schotis-SemiBold tracking-wider">
                                             {item.heading}
@@ -91,17 +79,12 @@ const Gallery = () => {
                                         </p>
                                     </div>
 
-                                    {/* OVERLAY */}
                                     <div className="absolute inset-0 bg-black/55 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-
-
-
                                 </a>
                             </section>
                         ))}
                     </div>
 
-                    {/* PREVIOUS BUTTON */}
                     <button
                         type="button"
                         onClick={prevSlide}
@@ -114,7 +97,6 @@ const Gallery = () => {
                         </span>
                     </button>
 
-                    {/* NEXT BUTTON */}
                     <button
                         type="button"
                         onClick={nextSlide}
@@ -128,7 +110,6 @@ const Gallery = () => {
                     </button>
                 </div>
 
-                {/* CTA BUTTON */}
                 <section className="py-6 flex">
                     <button
                         type="button"
@@ -140,17 +121,9 @@ const Gallery = () => {
                     </button>
                 </section>
 
-
-
-
             </div>
 
         </main>
-
-
-
-
-
     )
 }
 

@@ -5,14 +5,14 @@ const Ourflavors = () => {
 
   const nextSlide = () => {
     if (!carouselRef.current) return;
-    const itemWidth = carouselRef.current.offsetWidth / 4;
-    carouselRef.current.scrollBy({ left: itemWidth, behavior: 'smooth' });
+    const containerWidth = carouselRef.current.offsetWidth;
+    carouselRef.current.scrollBy({ left: containerWidth, behavior: 'smooth' });
   };
 
   const prevSlide = () => {
     if (!carouselRef.current) return;
-    const itemWidth = carouselRef.current.offsetWidth / 4;
-    carouselRef.current.scrollBy({ left: -itemWidth, behavior: 'smooth' });
+    const containerWidth = carouselRef.current.offsetWidth;
+    carouselRef.current.scrollBy({ left: -containerWidth, behavior: 'smooth' });
   };
 
   const images = [
@@ -37,25 +37,21 @@ const Ourflavors = () => {
         </h2>
       </header>
 
-      <div className="relative max-w-280  w-full  mx-auto py-8 px-2 mr-0 pr-0 pl-0 ml-0">
+      <div className="relative max-w-280 w-full mx-auto py-8 px-2 mr-0 pr-0 pl-0 ml-0">
         <div ref={carouselRef} className="w-full overflow-hidden flex scroll-smooth gap-4">
           {images.map((item, index) => (
             <div key={index} className='flex flex-col' style={{ flex: "0 0 calc((100% - 3.5rem) / 4)" }}>
 
-              {/* WHITE SECTION (Hover Trigger) */}
               <div className="bg-white group/card flex justify-center items-center cursor-pointer h-92 relative overflow-hidden rounded-lg">
 
-                {/* Sale Tag */}
                 {item.sale && (
                   <div className='absolute left-3 top-3 bg-sharp-pink text-white h-5.5 px-3 rounded-2xl flex items-center justify-center font-Schotis-Light text-sm z-30 pointer-events-none'>
                     {item.sale}
                   </div>
                 )}
 
-                {/* ICON MENU - Triggers ONLY when hovering the white box */}
                 <div className='absolute right-3 top-3 z-40 flex flex-col gap-2 opacity-0 translate-x-4 group-hover/card:opacity-100 group-hover/card:translate-x-0 transition-all duration-300'>
 
-                  {/* Quick View */}
                   <div className='flex items-center group/icon relative cursor-pointer'>
                     <span className='absolute right-full mr-2 whitespace-nowrap bg-sharp-pink text-white h-6 px-2 rounded-2xl flex items-center justify-center font-Schotis-Light text-xs opacity-0 group-hover/icon:opacity-100 transition-opacity duration-200 shadow-sm pointer-events-none'>
                       Quick View
@@ -65,7 +61,6 @@ const Ourflavors = () => {
                     </button>
                   </div>
 
-                  {/* Share */}
                   <div className='flex items-center group/icon relative cursor-pointer'>
                     <span className='absolute right-full mr-2 whitespace-nowrap bg-sharp-pink text-white h-6 px-2 rounded-2xl flex items-center justify-center font-Schotis-Light text-xs opacity-0 group-hover/icon:opacity-100 transition-opacity duration-200 shadow-sm pointer-events-none'>
                       Share
@@ -75,7 +70,6 @@ const Ourflavors = () => {
                     </button>
                   </div>
 
-                  {/* Like */}
                   <div className='flex items-center group/icon relative cursor-pointer'>
                     <span className='absolute right-full mr-2 whitespace-nowrap bg-sharp-pink text-white h-6 px-2 rounded-2xl flex items-center justify-center font-Schotis-Light text-xs opacity-0 group-hover/icon:opacity-100 transition-opacity duration-200 shadow-sm pointer-events-none'>
                       Like
@@ -86,7 +80,6 @@ const Ourflavors = () => {
                   </div>
                 </div>
 
-                {/* PRODUCT IMAGE */}
                 <img
                   src={item.img}
                   alt={item.name}
@@ -95,7 +88,6 @@ const Ourflavors = () => {
                 />
               </div>
 
-              {/* NON-HOVERABLE TEXT SECTION */}
               <div className='py-6 flex flex-col items-center'>
                 <p className='font-Schotis-Bold text-lg '>{item.name}</p>
                 <div className='flex gap-0.5 py-2'>
@@ -104,7 +96,7 @@ const Ourflavors = () => {
                   ))}
                 </div>
                 <div className='flex items-center justify-center gap-1 mt-3.5 '>
-                  {item.price1 && <span className='font-Mazzard-Regular text-sm -px-4  line-through text-gray-400'> &nbsp;&nbsp;&nbsp; {item.price1} &nbsp;&nbsp;&nbsp;</span>}
+                  {item.price1 && <span className='font-Mazzard-Regular text-sm line-through text-gray-400'>{item.price1}</span>}
                   <span className='font-Mazzard-SemiBold text-sm px-3 '>{item.price2}</span>
                 </div>
               </div>
@@ -113,7 +105,6 @@ const Ourflavors = () => {
           ))}
         </div>
 
-        {/* CAROUSEL BUTTONS */}
         <button onClick={prevSlide} className="absolute top-1/2 -translate-y-20 left-0 -translate-x-13 z-50 p-2 rounded-full border border-gray-900 group hover:border-sharp-pink transition-colors cursor-pointer">
           <svg className="w-5 h-5 text-gray-900 group-hover:text-sharp-pink" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7" />
