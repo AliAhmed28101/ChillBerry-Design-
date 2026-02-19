@@ -30,19 +30,21 @@ const Gallery = () => {
     ]
 
     return (
-        <main className='maincontainer w-full h-155 bg-baby-pink '>
+        <main className='maincontainer w-full h-155 bg-baby-pink'>
 
-            <div className='start flex flex-col py-22 items-center px-8 mr-0 pr-7  pb-0 justify-center'>
+            <div className='start flex flex-col py-22 items-center px-8 mr-0 pr-7 pb-0 justify-center'>
 
                 <div className='textbox flex items-center justify-center'>
                     <section className='content'>
-                        <p className='font-Mazzard-Regular text-sharp-pink text-sm text-center'>
+                        <p className='font-Mazzard-Regular text-sharp-pink text-xs sm:text-sm uppercase  text-center'>
                             GALLERY
                         </p>
 
                         <div className='py-3.5'>
-                            <span className='font-Schotis-Bold text-3xl tracking-wide'>
-                                <h5 className='px-8'>Ice Cream Moments</h5>
+                            <span className='font-Schotis-Bold text-2xl sm:text-3xl tracking-wide'>
+                                <h5 className='px-2 sm:px-4 md:px-8 whitespace-nowrap'>
+                                    Ice Cream Moments
+                                </h5>
                             </span>
                         </div>
                     </section>
@@ -52,10 +54,19 @@ const Gallery = () => {
 
                     <div
                         ref={carouselRef}
-                        className="carousel w-full overflow-hidden scroll-smooth flex h-70 gap-4 "
+                        className="carousel w-full overflow-hidden scroll-smooth flex h-70 gap-4"
                     >
                         {images.map((item, index) => (
-                            <section key={index} className="carousel-item flex-shrink-0 basis-[calc((100%-4rem)/5)] rounded-2xl overflow-hidden">
+                            <section
+                                key={index}
+                                className="carousel-item flex-shrink-0 
+                                           basis-full 
+                                           sm:basis-[calc((100%-1rem)/2)] 
+                                           md:basis-[calc((100%-2rem)/3)] 
+                                           lg:basis-[calc((100%-3rem)/4)] 
+                                           xl:basis-[calc((100%-4rem)/5)] 
+                                           rounded-2xl overflow-hidden"
+                            >
                                 <a
                                     target="_blank"
                                     rel="noopener noreferrer"
@@ -66,7 +77,7 @@ const Gallery = () => {
                                         src={item.img}
                                         alt=""
                                         draggable="false"
-                                        className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                                        className="w-full h-full object-cover 2xl:object-fill sm:object-cover transition-transform duration-300 md:group-hover:scale-105 "
                                     />
 
                                     <div className="absolute bottom-4 left-4 right-4 z-20 text-white opacity-0 group-hover:opacity-100">
@@ -110,14 +121,14 @@ const Gallery = () => {
                     </button>
                 </div>
 
-                <section className="py-6 flex">
+                <section className="py-6 flex justify-center items-center w-full">
                     <button
                         type="button"
                         onClick={() => alert("View Menu")}
                         className="inline-flex items-center justify-center gap-1 font-Mazzard-Regular text-white text-sm bg-sharp-pink px-6 py-2.5 rounded-4xl hover:cursor-pointer"
                     >
                         View Menu
-                        <img className="h-3 invert" src="next.svg" alt="next" />
+                        <img className="h-3.5 invert" src="next.svg" alt="next" />
                     </button>
                 </section>
 

@@ -30,9 +30,9 @@ const Ourflavors = () => {
   ];
 
   return (
-    <main className="w-full bg-baby-pink py-14 sm:py-16 px-4 flex flex-col items-center h-full pb-11">
-      <header className="text-center max-w-3xl mb-10">
-        <p className="font-Mazzard-Regular text-sharp-pink text-xs sm:text-sm uppercase tracking-widest">
+    <main className="w-full bg-baby-pink pt-14 sm:pt-16 px-4 flex flex-col items-center h-full pb-7">
+      <header className="text-center max-w-3xl ">
+        <p className="font-Mazzard-Regular text-sharp-pink text-xs sm:text-sm uppercase">
           OUR FLAVORS
         </p>
         <h2 className="font-Schotis-Bold text-2xl sm:text-3xl tracking-wide mt-3">
