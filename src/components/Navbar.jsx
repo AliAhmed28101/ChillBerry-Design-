@@ -1,70 +1,85 @@
+import React, { useState } from "react";
 
 const Navbar = () => {
+    const [isOpen, setIsOpen] = useState(false);
+
     return (
-        <nav className= "bg-baby-pink text-black py-2.5 ">
+        <header className="bg-baby-pink text-black py-3 w-full relative">
+            <nav className="max-w-[1440px] mx-auto flex items-center justify-between px-6 md:px-10 xl:px-20">
 
-            <div className="w-full maincontainer flex items-center justify-center sm:justify-between px-35">
-
-
-
-                <div className="logo-and-text flex items-center px-6">
-
-                    <div className="shrink-0">
-                        <img className="h-14" src="logo.png" alt="logo" />
-                    </div>
-
-                    <div className="flex text-xl justify-center items-center">
-                        <span className=" font-Schotis-Bold">
-                            Chill
-                        </span>
-                        <span className="text-sharp-pink font-Schotis-Bold">
-                            berry
-                        </span>
+                {/* Logo */}
+                <div className="flex items-center gap-2">
+                    <img className="h-12 md:h-14 shrink-0" src="logo.png" alt="logo" />
+                    <div className="flex text-lg md:text-xl font-Schotis-Bold">
+                        <span>Chill</span>
+                        <span className="text-sharp-pink">berry</span>
                     </div>
                 </div>
 
-
-
-                <div className="list hidden lg:flex justify-center items-center">
-
-                    <ul>
-                        <li className="flex gap-8 font-Mazzard-Regular text-sm ">
-                            <a className="hover:text-sharp-pink hover:transition-all" href="/">Home</a>
-                            <a className="hover:text-sharp-pink hover:transition-all" href="about-us">About Us</a>
-                            <a className="hover:text-sharp-pink hover:transition-all" href="our-flavors">Our Flavors</a>
-                            <a className="hover:text-sharp-pink hover:transition-all" href="gallery">Gallery</a>
-                            <a className="hover:text-sharp-pink hover:transition-all" href="testimonials">Testimonials</a>
-                            <a className="hover:text-sharp-pink hover:transition-all" href="contact">Contact</a>
-                        </li>
+                {/* Desktop Links (≥1024px) */}
+                <div className="hidden lg:flex items-center">
+                    <ul className="flex gap-8 font-Mazzard-Regular text-sm whitespace-nowrap">
+                        <li><a className="hover:text-sharp-pink transition" href="/">Home</a></li>
+                        <li><a className="hover:text-sharp-pink transition" href="/about-us">About Us</a></li>
+                        <li><a className="hover:text-sharp-pink transition" href="/our-flavors">Our Flavors</a></li>
+                        <li><a className="hover:text-sharp-pink transition" href="/gallery">Gallery</a></li>
+                        <li><a className="hover:text-sharp-pink transition" href="/testimonials">Testimonials</a></li>
+                        <li><a className="hover:text-sharp-pink transition" href="/contact">Contact</a></li>
                     </ul>
                 </div>
 
+                {/* Right Side Controls */}
+                <div className="flex items-center gap-4">
 
+                    {/* Order Button (≥768px) */}
+                    <div className="hidden md:block">
+                        <button
+                            type="button"
+                            onClick={() => alert("Order Now")}
+                            className="flex items-center gap-1 font-Mazzard-Regular text-white text-sm bg-sharp-pink px-6 py-2.5 rounded-full hover:opacity-90 transition"
+                        >
+                            Order Now
+                            <img className="h-3 invert" src="next.svg" alt="next" />
+                        </button>
+                    </div>
 
-
-                <div className="button hidden md:block px-8">
-
-
-
-                    <button type="button" onClick={()=>alert("Order Now")} className=" flex items-center justify-center gap-1 font-Mazzard-Regular text-white text-sm bg-sharp-pink px-6 py-2.5 rounded-4xl hover:cursor-pointer">
-                        Order Now
-
-                        <img className="h-3 invert" src="next.svg" alt="next" />
-
-                    </button>
-
+                    {/* Hamburger (<1024px) */}
+                    <div className="lg:hidden">
+                        <button onClick={() => setIsOpen(!isOpen)}>
+                            <svg
+                                className="w-9 h-9 text-sharp-pink translate-y-1"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    strokeWidth="2"
+                                    d="M4 6h16M4 12h16M4 18h16"
+                                />
+                            </svg>
+                        </button>
+                    </div>
 
                 </div>
+            </nav>
 
+            {/* Mobile / Tablet Dropdown */}
+            {isOpen && (
+                <div className="lg:hidden bg-baby-pink border-t border-pink-200 px-6 py-4">
+                    <ul className="flex flex-col gap-4 font-Mazzard-Regular text-sm">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/about-us">About Us</a></li>
+                        <li><a href="/our-flavors">Our Flavors</a></li>
+                        <li><a href="/gallery">Gallery</a></li>
+                        <li><a href="/testimonials">Testimonials</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                    </ul>
+                </div>
+            )}
+        </header>
+    );
+};
 
-
-            </div>
-        </nav>
-    )
-}
-
-export default Navbar
-
-
-
-
+export default Navbar;

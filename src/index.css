@@ -4,6 +4,17 @@
 
 
 
+
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+
 @font-face {
   font-family: Mazzard-Bold;
   src: url(../src/assets/fonts/MazzardSoftH-Bold.otf) format("opentype");
@@ -23,6 +34,8 @@
   font-family: Effolia-Black;
   src: url(../src/assets/fonts/theeffolia-black.otf) format("opentype");
 }
+
+
 
 @font-face {
   font-family: Effolia-Bold;

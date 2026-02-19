@@ -13,25 +13,25 @@ function App() {
 
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
 
-      <Herosection />
+      {/* <Herosection /> */}
 
-      <Ourstory />
+      {/* <Ourstory /> */}
 
       <Ourflavors />
 
-      <SpecialOffers />
+      {/* <SpecialOffers /> */}
 
-      <Gallery />
+      {/* <Gallery /> */}
 
-      <Testimonials />
+      {/* <Testimonials /> */}
 
-      <Contactus />
+      {/* <Contactus /> */}
 
-      <Social />
+      {/* <Social /> */}
 
-      <Footer />
+      {/* <Footer /> */}
 
     </>
   )

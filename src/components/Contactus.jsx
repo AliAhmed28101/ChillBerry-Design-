@@ -176,11 +176,7 @@ const Contactus = () => {
                 </div>
 
 
-
-
             </div>
-
-
 
 
             <div className='mapandform flex gap-5 z-20 py-40 px-50 w-full'>
@@ -212,7 +208,6 @@ const Contactus = () => {
                         </section>
 
 
-
                         <section className='Phone border border-white/40 rounded-[7px] w-50 flex'>
 
                             <input className='px-3 py-1.5 text-sm w-40 outline-none' type="text" placeholder='Phone' name='phone' value={form.phone} onChange={handleChange} />
@@ -239,7 +234,6 @@ const Contactus = () => {
                         </section>
 
 
-
                         <section className='Subject border border-white/40 rounded-[7px] w-50 flex relative items-center bg-transparent'>
                             <select onChange={handleChange} name='subject' value={form.subject} className='appearance-none px-3 py-1.5 text-sm w-full outline-none text-white/50 cursor-pointer'>
                                 <option className="text-sharp-pink" value="Subject">Subject</option>
@@ -255,7 +249,6 @@ const Contactus = () => {
                         </section>
 
                     </div>
-
 
 
                     <section className='flex px-12'>
@@ -281,20 +274,15 @@ const Contactus = () => {
 
                     </section>
 
-
                 </form>
-
-
+            
             </div>
-
 
         </main>
     )
 }
 
 export default Contactus
-
-
 
 
 
