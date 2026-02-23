@@ -1,18 +1,29 @@
-import React, { useRef } from 'react'
+import React, { useRef } from "react"
 
 const Social = () => {
     const carouselRef = useRef(null)
 
+    const getItemsPerView = () => {
+        const width = window.innerWidth
+        if (width >= 1536) return 5
+        if (width >= 1280) return 4
+        if (width >= 1024) return 3
+        if (width >= 640) return 2
+        return 1
+    }
+
     const nextSlide = () => {
         if (!carouselRef.current) return
-        const itemWidth = carouselRef.current.offsetWidth / 4
-        carouselRef.current.scrollBy({ left: itemWidth, behavior: 'smooth' })
+        const items = getItemsPerView()
+        const itemWidth = carouselRef.current.offsetWidth / items
+        carouselRef.current.scrollBy({ left: itemWidth, behavior: "smooth" })
     }
 
     const prevSlide = () => {
         if (!carouselRef.current) return
-        const itemWidth = carouselRef.current.offsetWidth / 4
-        carouselRef.current.scrollBy({ left: -itemWidth, behavior: 'smooth' })
+        const items = getItemsPerView()
+        const itemWidth = carouselRef.current.offsetWidth / items
+        carouselRef.current.scrollBy({ left: -itemWidth, behavior: "smooth" })
     }
 
     const images = [
@@ -27,50 +38,63 @@ const Social = () => {
     ]
 
     return (
-        <div className="maincontainer w-full h-182">
-            <div className="flex flex-col items-center justify-center">
+        <div className="w-full py-20">
+            <div className="max-w-[1400px] mx-auto flex flex-col items-center justify-center">
 
                 {/* TITLE */}
-                <div className="py-16 pb-7">
-                    <h5 className="px-8 font-Schotis-Bold text-3xl tracking-wide">
+                <div className="pb-10 text-center">
+                    <h5 className="px-6 font-Schotis-Bold text-2xl sm:text-3xl tracking-wide">
                         Get Social With @Chillberry
                     </h5>
                 </div>
 
                 {/* CAROUSEL WRAPPER */}
-                <div className="relative w-full mx-auto">
+                <div className="relative w-full">
 
                     {/* CAROUSEL */}
                     <div
                         ref={carouselRef}
-                        className="carousel w-full overflow-hidden scroll-smooth flex h-110"
+                        className="w-full overflow-hidden scroll-smooth flex"
                     >
                         {images.map((item, index) => (
-                            <div key={index} className="carousel-item w-1/4">
+                            <div
+                                key={index}
+                                className="
+                                    shrink-0
+                                    w-full
+                                    sm:w-1/2
+                                    md:w-1/3
+                                    lg:w-1/3
+                                    xl:w-1/4
+                                    2xl:w-1/4
+                                "
+                            >
                                 <a
                                     href={item.link}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     draggable="false"
-                                    className="relative block w-full h-full overflow-hidden group cursor-pointer hover:z-10"
+                                    className="relative block w-full aspect-square overflow-hidden group cursor-pointer"
                                 >
-                                    {/* IMAGE */}
                                     <img
                                         src={item.img}
                                         alt=""
                                         draggable="false"
-                                        className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                                        className="
+                                            w-full h-full
+                                            object-cover
+                                            transition-transform duration-300
+                                            group-hover:scale-105
+                                        "
                                     />
 
-                                    {/* OVERLAY */}
                                     <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
-                                    {/* CENTER ICON */}
                                     <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                         <img
                                             src={item.icon}
                                             alt=""
-                                            className="w-16 h-16 invert"
+                                            className="w-20  h-20 sm:w-14 sm:h-14 invert"
                                         />
                                     </div>
                                 </a>
@@ -82,7 +106,7 @@ const Social = () => {
                     <button
                         type="button"
                         onClick={prevSlide}
-                        className="absolute top-1/2 -translate-y-1/2 left-7 z-50 cursor-pointer"
+                        className="absolute top-1/2 -translate-y-1/2 left-4 sm:left-6 z-50 cursor-pointer"
                     >
                         <span className="flex items-center justify-center w-10 h-10 rounded-full bg-gray-900 hover:bg-sharp-pink text-white shadow-lg">
                             <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -95,7 +119,7 @@ const Social = () => {
                     <button
                         type="button"
                         onClick={nextSlide}
-                        className="absolute top-1/2 -translate-y-1/2 right-7 z-50 cursor-pointer"
+                        className="absolute top-1/2 -translate-y-1/2 right-4 sm:right-6 z-50 cursor-pointer"
                     >
                         <span className="flex items-center justify-center w-10 h-10 rounded-full bg-gray-900 hover:bg-sharp-pink text-white shadow-lg">
                             <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -106,14 +130,32 @@ const Social = () => {
                 </div>
 
                 {/* CTA BUTTON */}
-                <div className="py-11 flex">
+                <div className="pt-12">
                     <button
                         type="button"
                         onClick={() => alert("Order Now")}
-                        className="inline-flex items-center justify-center gap-1 font-Mazzard-Regular text-white text-sm bg-sharp-pink px-6 py-2.5 rounded-4xl hover:cursor-pointer"
+                        className="
+                            inline-flex
+                            items-center
+                            justify-center
+                            gap-2
+                            whitespace-nowrap
+                            font-Mazzard-Regular
+                            text-white
+                            text-sm
+                            bg-sharp-pink
+                            px-6
+                            py-2.5
+                            rounded-full
+                            cursor-pointer
+                        "
                     >
-                        Order Now
-                        <img className="h-3 invert" src="next.svg" alt="next" />
+                        <span>Order Now</span>
+                        <img
+                            className="h-3 w-3 shrink-0 invert"
+                            src="next.svg"
+                            alt="next"
+                        />
                     </button>
                 </div>
             </div>

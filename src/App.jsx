@@ -13,7 +13,7 @@ function App() {
 
   return (
     <>
-      {/* <Navbar />  responsiveness done */}
+     {/* <Navbar />   */}
 
 
       {/* <Herosection /> */}
@@ -22,13 +22,13 @@ function App() {
       {/* <Ourstory /> */}
 
 
-       <Ourflavors /> 
+      <Ourflavors />
 
 
-      {/* <SpecialOffers /> */}
+      {/* <SpecialOffers />  */}
 
 
-      <Gallery /> 
+     {/* <Gallery />  */}
 
 
       {/* <Testimonials /> */}
@@ -37,7 +37,7 @@ function App() {
       {/* <Contactus /> */}
 
 
-      {/* <Social /> */}
+      <Social />
 
 
       {/* <Footer /> */}
