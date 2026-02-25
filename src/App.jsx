@@ -13,7 +13,7 @@ function App() {
 
   return (
     <>
-     {/* <Navbar />   */}
+     <Navbar />  
 
 
       {/* <Herosection /> */}
@@ -28,7 +28,7 @@ function App() {
       {/* <SpecialOffers />  */}
 
 
-     {/* <Gallery />  */}
+     <Gallery /> 
 
 
       {/* <Testimonials /> */}
@@ -40,7 +40,7 @@ function App() {
       <Social />
 
 
-      {/* <Footer /> */}
+      <Footer />
 
     </>
   )
