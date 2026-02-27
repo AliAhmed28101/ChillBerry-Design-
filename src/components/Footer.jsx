@@ -9,7 +9,7 @@ const Footer = () => {
         <div className='diagonal bg-lightblack px-47 py-26 rounded-3xl -rotate-22 translate-x-40'></div>
       </section>
 
-      <main className="w-full py-4">
+      <main className="w-full ">
 
         {/* Constrained Content */}
         <div className="max-w-7xl mx-auto px-6">

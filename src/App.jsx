@@ -13,7 +13,7 @@ function App() {
 
   return (
     <>
-     <Navbar />  
+     {/* <Navbar />  resp */}
 
 
       {/* <Herosection /> */}
@@ -34,13 +34,13 @@ function App() {
       {/* <Testimonials /> */}
 
 
-      {/* <Contactus /> */}
+      <Contactus />
 
 
-      <Social />
+      {/* <Social /> resp */}
 
 
-      <Footer />
+      {/* <Footer />  resp */}
 
     </>
   )
