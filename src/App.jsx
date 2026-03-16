@@ -31,10 +31,10 @@ function App() {
      <Gallery /> 
 
 
-      {/* <Testimonials /> */}
+      <Testimonials />
 
 
-      <Contactus />
+      {/* <Contactus /> resp */}
 
 
       {/* <Social /> resp */}
