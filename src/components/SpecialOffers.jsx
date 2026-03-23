@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from 'react'
 
-
 const SpecialOffers = () => {
 
-
-    const targetTime = new Date("2026-02-18T23:59:59").getTime()
+    const targetTime = new Date("2026-04-18T23:59:59").getTime()
 
     const [timeLeft, setTimeLeft] = useState({
         days: "00",
@@ -13,10 +11,7 @@ const SpecialOffers = () => {
         seconds: "00",
     })
 
-
-
     const [isExpired, setIsExpired] = useState(false)
-
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -45,164 +40,80 @@ const SpecialOffers = () => {
         return () => clearInterval(interval)
     }, [])
 
-
     if (isExpired) return null
 
-
     return (
-        <div className='mainbody bg-chocolate-brown w-full flex justify-evenly items-center h-140 px-20'>
+        <div className='bg-chocolate-brown w-full flex justify-center'>
 
+            {/* MAX WIDTH CONTAINER */}
+            <div className='w-full max-w-[1550px] flex flex-col lg:flex-row justify-between items-center px-4 sm:px-8 lg:px-16 xl:px-20 py-10'>
 
+                {/* LEFT */}
+                <div className='flex flex-col w-full max-w-[700px] items-center lg:items-center text-center lg:text-left'>
 
-
-
-            <div className='left flex flex-col py-10 w-340 h-130 px-15'>
-
-
-                <div className='textboxcontainer flex flex-col gap-6 max-w-2xl'>
-
-                    <div className='text px-8'>
-
-                        <p className='font-Mazzard-Regular text-sharp-pink text-sm'>
-                            SPECIAL OFFERS
-                        </p>
-
-
-                    </div>
-
-
-                </div>
-
-                <div className='py-3.5 '>
-                    <span className='font-Schotis-Bold text-4xl text-white tracking-wide'>
-                        <h5 className='px-8'>Sweet Deals Ending in <br /> Hours</h5>
-
-                    </span>
-                </div>
-
-
-
-                <div className='timer flex gap-2 py-6 items-center px-7 '>
-
-                    <div className='w-28 h-25 py-2 rounded-2xl text-center border text-sharp-pink border-sharp-pink font-Schotis-SemiBold tracking-widest text-5xl'>
-                        {timeLeft.days}
-
-
-                        <div className='font-Mazzard-Regular text-sm text-gray-400 tracking-wider py-2 text-center'>
-                            Days
-                        </div>
-
-
-                    </div>
-
-
-                    <div className='w-28 h-25 py-2 rounded-2xl text-center border text-sharp-pink border-sharp-pink font-Schotis-SemiBold tracking-widest text-5xl'>
-                        {timeLeft.hours}
-
-
-                        <div className='font-Mazzard-Regular text-sm text-gray-400 tracking-wider py-2 text-center'>
-                            Hours
-                        </div>
-
-
-                    </div>
-
-
-                    <div className='w-28 h-25 py-2 rounded-2xl text-center border text-sharp-pink border-sharp-pink font-Schotis-SemiBold tracking-widest text-5xl'>
-                        {timeLeft.minutes}
-
-
-                        <div className='font-Mazzard-Regular text-sm text-gray-400 tracking-wider py-2 text-center'>
-                            Minutes
-                        </div>
-
-
-                    </div>
-
-
-                    <div className='w-28 h-25 py-2 rounded-2xl text-center border text-sharp-pink border-sharp-pink font-Schotis-SemiBold tracking-widest text-5xl'>
-                        {timeLeft.seconds}
-
-
-                        <div className='font-Mazzard-Regular text-sm text-gray-400 tracking-wider py-2 text-center'>
-                            Seconds
-                        </div>
-
-
-                    </div>
-
-
-                </div>
-
-
-                <div className='text-white px-7 py-2'>
-                    <p className='font-Mazzard-Regular text-gray-400 text-sm' >
-
-                        Don't miss out on our limited-time ice cream offers! Whatever you're craving classic favorites or <br />
-                        bold new flavors now's the perfect time to treat yourself. These sweet deals are melting fast — <br />
-                        grab yours before they're gone!
-
+                    <p className='font-Mazzard-Regular text-sharp-pink text-sm lg:-translate-x-47'>
+                        SPECIAL OFFERS
                     </p>
+
+                    <h5 className='font-Schotis-Bold text-2xl lg:-translate-x-12 sm:text-3xl lg:text-4xl text-white tracking-wide py-4'>
+                        Sweet Deals Ending in <br /> Hours
+                    </h5>
+
+                    {/* TIMER - FIXED */}
+                    <div className='grid grid-cols-4 gap-2 sm:gap-3 py-6 w-full max-w-[380px] sm:max-w-[470px] lg:max-w-[500px]'>
+
+                        {[ 
+                            { value: timeLeft.days, label: "Days" },
+                            { value: timeLeft.hours, label: "Hours" },
+                            { value: timeLeft.minutes, label: "Minutes" },
+                            { value: timeLeft.seconds, label: "Seconds" }
+                        ].map((item, index) => (
+                            <div 
+                                key={index} 
+                                className='h-20 sm:h-28 rounded-2xl flex flex-col justify-center items-center border border-sharp-pink text-sharp-pink font-Schotis-SemiBold tracking-widest text-2xl sm:text-4xl lg:text-5xl'
+                            >
+                                {item.value}
+                                <span className='font-Mazzard-Regular text-[12px] sm:text-xs text-gray-400 tracking-wider lg:mt-3  mt-2'>
+                                    {item.label}
+                                </span>
+                            </div>
+                        ))}
+
+                    </div>
+
+                    <p className='font-Mazzard-Regular text-gray-400 lg:translate-x-15 text-sm leading-relaxed max-w-[500px] sm:max-w-[550px] lg:max-w-[620px]'>
+                        Don't miss out on our limited-time ice cream offers! Whatever you're craving classic favorites or 
+                        bold new flavors now's the perfect time to treat yourself. These sweet deals are melting fast — 
+                        grab yours before they're gone!
+                    </p>
+
+                    <div className="py-8 lg:-translate-x-45">
+                        <button 
+                            type="button" 
+                            onClick={() => alert("Order Now")}
+                            className="flex items-center justify-center gap-2 font-Mazzard-Regular text-white text-sm bg-sharp-pink px-6 py-2.5 rounded-4xl hover:cursor-pointer"
+                        >
+                            Order Now
+                            <img className="h-3 invert" src="next.svg" alt="next" />
+                        </button>
+                    </div>
+
                 </div>
 
-
-
-
-                <div className="button px-8 py-10 w-60">
-
-
-
-                    <button type="button" onClick={() => alert("Order Now")} className=" flex items-center justify-center gap-1 font-Mazzard-Regular text-white text-sm bg-sharp-pink px-6 py-2.5 rounded-4xl hover:cursor-pointer">
-                        Order Now
-
-                        <img className="h-3 invert" src="next.svg" alt="next" />
-
-                    </button>
-
-
+                {/* RIGHT IMAGE */}
+                <div className='relative w-full lg:w-[45%] h-[300px] sm:h-[400px] lg:h-[500px] mt-10 lg:mt-0 hidden lg:block'>
+                    <div className='absolute right-0 top-1/2 -translate-y-1/2'>
+                        <img
+                            src="/images/section4/glass.png"
+                            alt="ice cream"
+                            className="max-w-[360px] xl:max-w-[450px] object-contain"
+                        />
+                    </div>
                 </div>
-
-
 
             </div>
-
-
-
-
-
-
-
-            <div className='right relative w-[45%] h-full '>
-
-                {/* IMAGE WRAPPER */}
-                <div className='absolute right-3 top-1/2 -translate-y-63.5'>
-                    <img
-                        src="/images/section4/glass.png"
-                        alt=""
-                        className="max-w-[500px] object-contain"
-                    />
-                </div>
-
-            </div>
-
-
-
-
-
-
-
-
-
         </div>
     )
 }
 
 export default SpecialOffers
-
-
-
-
-
-
-
-

@@ -22,16 +22,16 @@ function App() {
       {/* <Ourstory /> */}
 
 
-      <Ourflavors />
+      {/* <Ourflavors /> resp */}
 
 
-      {/* <SpecialOffers />  */}
+      <SpecialOffers /> 
 
 
      <Gallery /> 
 
 
-      <Testimonials />
+      {/* <Testimonials /> resp */}
 
 
       {/* <Contactus /> resp */}
