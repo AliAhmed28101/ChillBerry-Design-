@@ -13,34 +13,34 @@ function App() {
 
   return (
     <>
-     {/* <Navbar />  resp */}
+     {/* <Navbar /> */}
 
 
-      {/* <Herosection /> */}
+      <Herosection />
 
 
-      {/* <Ourstory /> */}
+      <Ourstory />
 
 
-      {/* <Ourflavors /> resp */}
+      <Ourflavors /> 
 
 
-      <SpecialOffers /> 
+      {/* <SpecialOffers  />  */}
 
 
-     <Gallery /> 
+     {/* <Gallery />  */}
 
 
-      {/* <Testimonials /> resp */}
+      {/* <Testimonials />  */}
 
 
-      {/* <Contactus /> resp */}
+      {/* <Contactus /> */}
 
 
-      {/* <Social /> resp */}
+      {/* <Social /> */}
 
 
-      {/* <Footer />  resp */}
+      {/* <Footer />  */}
 
     </>
   )

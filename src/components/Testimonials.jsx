@@ -158,7 +158,7 @@ const Testimonials = () => {
                 </div>
 
                 {/* Doodle Image */}
-                <div className="absolute right-10 -bottom-25 z-30 hidden lg:block">
+                <div className="absolute right-10 -bottom-25 z-30 hidden lg:block xl:-translate-y-4 xl:-translate-x-8">
                     <img className="w-60 h-60 xl:w-65 xl:h-65 object-contain" src="/images/section6/doodle.png" alt="doodle" />
                 </div>
             </div>

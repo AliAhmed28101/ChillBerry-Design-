@@ -2,126 +2,119 @@ import React from 'react'
 
 const Ourstory = () => {
   return (
-    <div className='maincontainer relative w-full h-full flex mb-0 pb-0 '>
-
-      <div className='lefty flex flex-col mb-0 pb-0 '>
-        <div className='cone py-24'>
-          <img
-            className='w-65 h-65 object-contain -translate-x-2.5'
-            src="/images/section2/cone.png"
-            alt=""
-          />
-
-          <div className='righttextbox px-40 pr-0'>
-            <h2 className='font-Schotis-Bold tracking-wider text-lg'>
-              About Chill Berry
-            </h2>
-
-            <p className='text-gray-500 text-sm font-Mazzard-Regular py-3'>
-              At Frosty Whirl, ice cream is more than just <br />
-              dessert — it's a celebration of flavor, creativity, <br />
-              and childhood joy. What started as a small local <br />
-              dream has grown into a delightful brand known <br />
-              for handcrafted scoops, real ingrediants, and <br />
-              unforgettable taste
-            </p>
-          </div>
+    <section className="w-full bg-white overflow-hidden">
+      {/* 1550px Max-Width Wrapper */}
+      <div className="max-w-[1550px] mx-auto relative px-6 py-12 md:py-12 lg:py-25 xl:py-0 xl:pt-13">
+        
+        {/* 1. TOP HEADING (Always first on all screens) */}
+        <div className="w-full text-center mb-10">
+          <p className="font-Mazzard-Regular text-sharp-pink text-xs sm:text-sm tracking-widest mb-2">
+            OUR STORY
+          </p>
+          <h1 className="font-Schotis-Bold text-2xl sm:text-3xl tracking-wide leading-tight py-2.5">
+            The Flavor <br  />
+            <span className="md:px-4">Behind the Fun</span>
+          </h1>
         </div>
-      </div>
 
-      <div className='mid flex flex-col py-16 items-center px-8 mr-0 pr-7 mb-0  pb-0 justify-center '>
-        <div className='textbox'>
-          <span className='px-26 pr-0 py-20 pb-0'>
-            <p className='font-Mazzard-Regular text-sharp-pink text-sm text-center'>
-              OUR STORY
-            </p>
-
-            <div className='py-3.5'>
-              <span className='font-Schotis-Bold text-3xl tracking-wide'>
-                <h5 className='px-8'>The Flavor</h5>
-                <h5>Behind the Fun</h5>
-              </span>
+        {/* 2. CONTENT GRID */}
+        <div className="flex flex-col md:flex-row items-center justify-between gap-12 md:gap-4">
+          
+          {/* --- LEFT SECTION (About Chill Berry) --- */}
+          <div className="w-full md:w-1/3 flex flex-col items-center md:items-start order-1">
+            {/* Desktop-only floating cone */}
+            <div className="hidden md:block mb-8 self-start">
+              <img
+                className="w-48 md:w-70 h-auto object-contain -translate-x-8 md:-translate-y-30"
+                src="/images/section2/cone.png"
+                alt="Cone Splash"
+              />
             </div>
-          </span>
-        </div>
+            
+            <div className="text-center md:text-left max-w-sm md:-translate-y-30 xl:translate-x-35 xl:w-80 xl:-translate-y-40">
+              <h2 className="font-Schotis-Bold tracking-wider text-lg sm:text-xl md:text-xl ">
+                About Chill Berry
+              </h2>
+              <p className="text-gray-500 text-sm font-Mazzard-Regular py-4 leading-relaxed ">
+                At Frosty Whirl, ice cream is more than just dessert — it's a celebration 
+                of flavor, creativity, and childhood joy. What started as a small local 
+                dream has grown into a delightful brand known for handcrafted scoops, 
+                real ingredients, and unforgettable taste.
+              </p>
+            </div>
+          </div>
 
-        <div className="midimgcontainer py-24 flex items-center justify-center">
-          <div className="pinkoutline bg-gradient-to-t from-sharp-pink from-0% to-white to-85% p-[3px] rounded-b-[131px]">
-            <div className="whitecenter bg-white p-[10px] rounded-b-[124px]">
-              <div className="pinkbox relative flex items-center justify-center w-[250px] h-[270px] bg-gradient-to-t from-sharp-pink from-0% to-white to-85% px-30 py-30 rounded-b-[120px]">
-                <div className="absolute bottom-6 w-[380px] px-10">
-                  <img
-                    src="/images/section2/mid.png"
-                    alt=""
-                    className="w-max h-78 drop-shadow-2xl"
-                  />
+          {/* --- MIDDLE SECTION (The Image) --- */}
+          <div className="w-full md:w-1/3 flex justify-center order-2">
+            <div className="bg-gradient-to-t from-sharp-pink from-0% to-white to-85% p-[3px] rounded-b-[131px]">
+              <div className="bg-white p-[8px] lg:p-[10px] rounded-b-[124px]">
+                <div className="relative flex items-center justify-center w-[220px] h-[240px] lg:w-[260px] lg:h-[280px] bg-gradient-to-t from-sharp-pink from-0% to-white to-85% rounded-b-[120px]">
+                  <div className="absolute bottom-5 lg:bottom-7 w-[320px] lg:w-[400px] px-6">
+                    <img
+                      src="/images/section2/mid.png"
+                      alt="Main Sundae"
+                      className="w-full h-auto drop-shadow-2xl"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
           </div>
+
+          {/* --- RIGHT SECTION (Joy In Every Scoop) --- */}
+          <div className="w-full md:w-1/3 flex flex-col items-center md:items-start order-3">
+            <div className="text-center md:text-left max-w-sm w-full xl:-translate-y-10 xl:-translate-x-10">
+              <h2 className="font-Schotis-Bold tracking-wider text-lg sm:text-xl md:text-xl">
+                Joy in Every Scoop
+              </h2>
+              <p className="text-gray-500 text-sm font-Mazzard-Regular py-4 leading-relaxed">
+                At Frosty Whirl, we believe every scoop should be a moment of joy. 
+                Crafted with care and a whole lot of love, our ice creams are 
+                made to bring smiles to every face.
+              </p>
+
+              {/* Checklist Container: Centered on mobile, left-aligned on desktop */}
+              <div className="flex flex-col gap-3 mt-2 w-fit mx-auto md:mx-0">
+                {[
+                  "Made with real, fresh ingredients",
+                  "Always small-batch and handcrafted",
+                  "No artificial flavors or preservatives"
+                ].map((text, index) => (
+                  <div key={index} className="flex items-center gap-3">
+                    <img className="h-5 w-5 flex-shrink-0" src="checkbox.svg" alt="check" />
+                    <p className="font-Mazzard-Regular text-gray-900 text-sm">
+                      {text}
+                    </p>
+                  </div>
+                ))}
+              </div>
+
+              {/* Button: Centered on mobile, left-aligned on desktop */}
+              <div className="mt-8 flex justify-center md:justify-start">
+                <button
+                  type="button"
+                  onClick={() => alert("Order Now")}
+                  className="flex items-center justify-center gap-2 font-Mazzard-Regular text-white text-sm bg-sharp-pink px-10 py-3 rounded-full transition-all cursor-pointer "
+                >
+                  Order Now
+                  <img className="h-3 invert" src="next.svg" alt="next" />
+                </button>
+              </div>
+            </div>
+
+            {/* Desktop-only right floating image */}
+            <div className="hidden lg:block absolute right-0 bottom-0 translate-y-2 translate-x-5 xl:-translate-y-1">
+              <img
+                className="w-48 lg:w-62 h-auto object-contain"
+                src="/images/section2/righty.png"
+                alt="Strawberry Splash"
+              />
+            </div>
+          </div>
+
         </div>
       </div>
-
-
-
-
-
-      <div className='Righty py-70 px-14 pr-0 relative pb-0 mb-0 pl-0'>
-        <h2 className='font-Schotis-Bold tracking-wider text-lg'>
-          Joy in Every Scoop
-        </h2>
-
-        <p className='text-gray-500 text-sm font-Mazzard-Regular py-3'>
-          At Frosty Whirl, we believe every scoop should be a <br />
-          moment of joy. Crafted with care and a whole lot<br />
-          of love, our ice creams are made to bring smiles<br />
-          to every face
-        </p>
-
-        <div className='points flex flex-col gap-2'>
-          <span className='flex items-center gap-2'>
-            <img className='h-5.5 w-5.5 rounded-full' src="checkbox.svg" alt="" />
-            <p className='font-Mazzard-Regular text-gray-900 text-sm'>
-              Made with real, fresh ingredients
-            </p>
-          </span>
-
-          <span className='flex items-center gap-2'>
-            <img className='h-5.5 w-5.5 rounded-full' src="checkbox.svg" alt="" />
-            <p className='font-Mazzard-Regular text-gray-900 text-sm'>
-              Always small-batch and handcrafted
-            </p>
-          </span>
-
-          <span className='flex items-center gap-2'>
-            <img className='h-5.5 w-5.5 rounded-full' src="checkbox.svg" alt="" />
-            <p className='font-Mazzard-Regular text-gray-900 text-sm'>
-              No artificial flavors or preservatives
-            </p>
-          </span>
-        </div>
-
-        <div className='button py-8 flex'>
-          <button type="button" onClick={() => alert("Order Now")} className=" flex items-center justify-center gap-1 font-Mazzard-Regular text-white text-sm bg-sharp-pink px-6 py-2.5 rounded-4xl hover:cursor-pointer">
-            Order Now
-
-            <img className="h-3 invert" src="next.svg" alt="next" />
-
-          </button>
-
-
-        </div>
-      </div>
-
-      <div className='rightbottimg absolute  right-0 py-108 mb-0 pb-0 mt-0 '>
-        <img
-          className='h-65 w-65 object-contain'
-          src="/images/section2/righty.png"
-          alt=""
-        />
-      </div>
-
-    </div>
+    </section>
   )
 }
 
