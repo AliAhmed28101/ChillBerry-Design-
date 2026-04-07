@@ -119,10 +119,10 @@ const Herosection = () => {
                                     w-[44%] md:w-[46%] lg:w-[48%] xl:w-[50%]'>
 
                         <section className='diagonalparent py-4 hidden lg:block'>
-                            <div className='diagonal bg-white px-5 py-37 md:py-30 lg:py-25 xl:py-35 lg:-translate-y-1 xl:translate-y-8 rounded-4xl rotate-22 -translate-x-100' />
+                            <div className='diagonal bg-white px-5 py-37 md:py-30 lg:py-25 xl:py-35 lg:translate-y-5 xl:-translate-y-2 lg:-translate-x-90 xl:-translate-x-110 rounded-4xl rotate-22 -translate-x-100' />
                         </section>
 
-                        <div className='relative z-10 pl-0 md:pl-2 lg:pl-10 xl:pl-16 pt-4 md:pt-0 lg:pt-8 lg:-translate-y-45 xl:-translate-y-60 '>
+                        <div className='relative z-10 pl-0 md:pl-2 lg:pl-10 xl:pl-16 pt-4 md:pt-0 lg:pt-8 lg:-translate-y-45 xl:-translate-y-73 '>
 
                             <h1 className='font-Schotis-SemiBold tracking-wider leading-tight
                                            text-4xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl'>
@@ -150,7 +150,7 @@ const Herosection = () => {
                                 <img className="h-2.5 lg:h-3 invert" src="next.svg" alt="next" />
                             </button>
 
-                            <div className='flex gap-1.5 md:gap-2 lg:gap-3 xl:gap-4 mt-6 md:mt-7 lg:mt-10'>
+                            <div className='flex gap-1.5 md:gap-2 lg:gap-3 xl:gap-4 mt-6 md:mt-7 lg:mt-10 xl:mt-22'>
                                 {items.map(item => (
                                     <div
                                         key={item.key}
@@ -183,7 +183,7 @@ const Herosection = () => {
                         */}
                         <div className='relative bg-light-cement 
                                         rounded-[50px] md:rounded-[60px] lg:rounded-[80px] xl:rounded-[95px]
-                                        w-full h-[300px]  md:h-[350px] lg:h-[500px] xl:h-[570px] lg:-translate-y-10'>
+                                        w-full h-[300px]  md:h-[350px] lg:h-[500px] xl:h-[570px] lg:-translate-y-10 xl:-translate-y-20'>
 
                             <img
                                 key={ActiveItem}
