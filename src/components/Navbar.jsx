@@ -8,7 +8,7 @@ const Navbar = () => {
             <nav className="max-w-[1550px] mx-auto flex items-center justify-between px-6 md:px-10 xl:px-20">
 
                 {/* Logo */}
-                <div className="flex items-center gap-2 xl:translate-x-9">
+                <div className="flex items-center gap-2 md:-translate-x-2 xl:translate-x-12 2xl:translate-x-16">
                     <img className="h-12 md:h-14 shrink-0" src="logo.png" alt="logo" />
                     <div className="flex text-lg md:text-xl font-Schotis-Bold">
                         <span>Chill</span>
@@ -32,7 +32,7 @@ const Navbar = () => {
                 <div className="flex items-center gap-4">
 
                     {/* Order Button (≥768px) */}
-                    <div className="hidden md:block xl:-translate-x-9">
+                    <div className="hidden md:block  xl:-translate-x-12 2xl:-translate-x-16">
                         <button
                             type="button"
                             onClick={() => alert("Order Now")}
