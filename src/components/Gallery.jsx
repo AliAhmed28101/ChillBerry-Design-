@@ -167,7 +167,7 @@ const Gallery = () => {
                     <button
                         type="button"
                         onClick={() => alert("View Menu")}
-                        className="inline-flex items-center justify-center gap-1 font-Mazzard-Regular text-white text-sm bg-sharp-pink px-6 py-2.5 rounded-4xl hover:cursor-pointer"
+                        className="inline-flex items-center justify-center gap-1 font-Mazzard-Regular text-white text-sm bg-sharp-pink hover:opacity-95 px-6 py-2.5 rounded-4xl hover:cursor-pointer"
                     >
                         View Menu
                         <img className="h-3 invert" src="next.svg" alt="" aria-hidden="true" />

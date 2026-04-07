@@ -150,6 +150,7 @@ const Social = () => {
                             py-2.5
                             rounded-full
                             cursor-pointer
+                            hover:opacity-95
                         "
                     >
                         <span>Order Now</span>

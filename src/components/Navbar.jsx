@@ -36,7 +36,7 @@ const Navbar = () => {
                         <button
                             type="button"
                             onClick={() => alert("Order Now")}
-                            className="flex items-center gap-1 font-Mazzard-Regular text-white text-sm bg-sharp-pink px-6 py-2.5 rounded-full hover:opacity-90 transition"
+                            className="flex items-center gap-1 font-Mazzard-Regular text-white text-sm bg-sharp-pink px-6 py-2.5 rounded-full hover:opacity-95 transition cursor-pointer"
                         >
                             Order Now
                             <img className="h-3 invert" src="next.svg" alt="next" />
@@ -46,7 +46,7 @@ const Navbar = () => {
                     {/* Hamburger (<1024px) */}
                     <button className="lg:hidden" onClick={() => setIsOpen(!isOpen)}>
                         <svg
-                            className="w-9 h-9 text-sharp-pink translate-y-1"
+                            className="w-9 h-9 text-black"
                             fill="none"
                             stroke="currentColor"
                             viewBox="0 0 24 24"
@@ -66,7 +66,7 @@ const Navbar = () => {
             {/* Mobile / Tablet Dropdown */}
             {isOpen && (
                 <div className="lg:hidden bg-baby-pink border-t border-pink-200 px-6 py-4">
-                    <ul className="flex flex-col gap-4 font-Mazzard-Regular text-sm">
+                    <ul className="flex flex-col gap-4 font-Mazzard-Regular text-sm text-sharp-pink">
                         <li><a href="/">Home</a></li>
                         <li><a href="/about-us">About Us</a></li>
                         <li><a href="/our-flavors">Our Flavors</a></li>

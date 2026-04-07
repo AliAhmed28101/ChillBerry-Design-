@@ -91,7 +91,7 @@ const SpecialOffers = () => {
                         <button 
                             type="button" 
                             onClick={() => alert("Order Now")}
-                            className="flex items-center justify-center gap-2 font-Mazzard-Regular text-white text-sm bg-sharp-pink px-6 py-2.5 rounded-4xl hover:cursor-pointer"
+                            className="flex items-center justify-center gap-2 font-Mazzard-Regular text-white text-sm bg-sharp-pink hover:opacity-95 px-6 py-2.5 rounded-4xl hover:cursor-pointer"
                         >
                             Order Now
                             <img className="h-3 invert" src="next.svg" alt="next" />

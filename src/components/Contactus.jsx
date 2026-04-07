@@ -156,7 +156,7 @@ const Contactus = () => {
                     </div>
 
                     <div className='flex justify-center lg:justify-end lg:py-2 lg:mr-14 xl:mr-11 2xl:mr-12'>
-                        <button type="submit" className="flex items-center justify-center gap-2 font-Mazzard-Regular text-white text-sm bg-sharp-pink px-8 py-2.5 2xl:px-4 2xl:py-2 2xl:gap-1 xl:px-4 xl:py-2 xl:gap-1 lg:px-4 lg:py-2 lg:gap-1 rounded-4xl hover:cursor-pointer transition-all hover:bg-pink-600 focus:ring-2 focus:ring-offset-2 focus:ring-sharp-pink outline-none">
+                        <button type="submit" className="flex items-center justify-center gap-2 font-Mazzard-Regular text-white text-sm bg-sharp-pink px-8 py-2.5 2xl:px-4 2xl:py-2 2xl:gap-1 xl:px-4 xl:py-2 xl:gap-1 lg:px-4 lg:py-2 lg:gap-1 rounded-4xl hover:cursor-pointer transition-all hover:opacity-95  focus:ring-2 focus:ring-offset-2 focus:ring-sharp-pink outline-none">
                             Submit Now
                             <img className="h-3 invert" src="next.svg" alt="" aria-hidden="true" />
                         </button>

@@ -93,7 +93,7 @@ const Ourstory = () => {
                 <button
                   type="button"
                   onClick={() => alert("Order Now")}
-                  className="flex items-center justify-center gap-2 font-Mazzard-Regular text-white text-sm bg-sharp-pink px-10 py-3 rounded-full transition-all cursor-pointer "
+                  className="flex items-center justify-center gap-2 font-Mazzard-Regular text-white text-sm bg-sharp-pink hover:opacity-95 px-10 py-3 rounded-full transition-all cursor-pointer "
                 >
                   Order Now
                   <img className="h-3 invert" src="next.svg" alt="" aria-hidden="true" />
