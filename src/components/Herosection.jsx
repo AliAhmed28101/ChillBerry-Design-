@@ -57,7 +57,7 @@ const Herosection = () => {
                 {/*
                     MOBILE  (< md) — stacked + centered
              */}
-                <div className='flex flex-col items-center text-center md:hidden px-5 pt-8 pb-6 gap-4'>
+                <div className='flex flex-col items-center text-center md:hidden px-5 pt-8 pb-12 gap-4'>
 
                     <h1 className='text-4xl tracking-wider font-Schotis-SemiBold leading-tight'>
                         Freeze the <br /> Moment
@@ -112,7 +112,7 @@ const Herosection = () => {
                 <div className='hidden md:flex flex-row items-center justify-between
                                 gap-4 lg:gap-8 xl:gap-12
                                 px-8 md:px-10 lg:px-16 xl:px-20 2xl:px-28
-                                py-8 md:py-10 lg:py-6 lg:pt-3 xl:py-16'>
+                                py-8 md:py-10 lg:py-6 lg:pt-3 xl:py-16  md:pb-25 lg:pb-0 xl:pb-0'>
 
                     {/*LEFT*/}
                     <div className='relative flex-shrink-0
@@ -122,7 +122,7 @@ const Herosection = () => {
                             <div className='diagonal bg-white px-5 py-37 md:py-30 lg:py-25 xl:py-35 lg:-translate-y-1 xl:translate-y-8 rounded-4xl rotate-22 -translate-x-100' />
                         </section>
 
-                        <div className='relative z-10 pl-0 md:pl-2 lg:pl-10 xl:pl-16 pt-4 md:pt-0 lg:pt-8 lg:-translate-y-45 xl:-translate-y-60'>
+                        <div className='relative z-10 pl-0 md:pl-2 lg:pl-10 xl:pl-16 pt-4 md:pt-0 lg:pt-8 lg:-translate-y-45 xl:-translate-y-60 '>
 
                             <h1 className='font-Schotis-SemiBold tracking-wider leading-tight
                                            text-4xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl'>
@@ -144,7 +144,7 @@ const Herosection = () => {
                                 className="flex items-center justify-center gap-1 font-Mazzard-Regular text-white bg-sharp-pink rounded-4xl hover:cursor-pointer
                                            text-xs md:text-xs lg:text-sm
                                            px-4 py-2 md:px-5 md:py-2 lg:px-6 lg:py-2.5
-                                           mt-4 md:mt-5 lg:mt-6"
+                                           mt-4 md:mt-5 lg:mt-6 "
                             >
                                 View Menu
                                 <img className="h-2.5 lg:h-3 invert" src="next.svg" alt="next" />
@@ -181,7 +181,7 @@ const Herosection = () => {
                             ICE CREAM CONTAINER — desktop
                      
                         */}
-                        <div className='relative bg-light-cement
+                        <div className='relative bg-light-cement 
                                         rounded-[50px] md:rounded-[60px] lg:rounded-[80px] xl:rounded-[95px]
                                         w-full h-[300px]  md:h-[350px] lg:h-[500px] xl:h-[570px] lg:-translate-y-10'>
 
@@ -200,7 +200,7 @@ const Herosection = () => {
                                             bg-white rounded-2xl lg:rounded-3xl shadow-xl z-10
                                             flex flex-col items-center justify-center
                                             w-24 h-24 md:w-24 md:h-24 lg:w-32 lg:h-32 xl:w-36 xl:h-36
-                                            gap-1.5 lg:gap-2">
+                                            gap-1.5 lg:gap-2 ">
                                 <span className="font-Mazzard-Regular text-[10px] md:text-xs lg:text-sm">
                                     Follow us on
                                 </span>

@@ -13,16 +13,16 @@ function App() {
 
   return (
     <>
-     {/* <Navbar /> */}
+     <Navbar />
 
 
       <Herosection />
 
 
-      {/* <Ourstory /> */}
+      <Ourstory />
 
 
-      {/* <Ourflavors />  */}
+      <Ourflavors /> 
 
 
       <SpecialOffers  /> 
@@ -31,16 +31,16 @@ function App() {
      <Gallery /> 
 
 
-      {/* <Testimonials />  */}
+      <Testimonials /> 
 
 
-      {/* <Contactus /> */}
+      <Contactus />
 
 
-      {/* <Social /> */}
+      <Social />
 
 
-      {/* <Footer />  */}
+      <Footer /> 
 
     </>
   )
