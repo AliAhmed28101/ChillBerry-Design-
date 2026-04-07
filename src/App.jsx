@@ -19,16 +19,16 @@ function App() {
       <Herosection />
 
 
-      <Ourstory />
+      {/* <Ourstory /> */}
 
 
-      <Ourflavors /> 
+      {/* <Ourflavors />  */}
 
 
-      {/* <SpecialOffers  />  */}
+      <SpecialOffers  /> 
 
 
-     {/* <Gallery />  */}
+     <Gallery /> 
 
 
       {/* <Testimonials />  */}
