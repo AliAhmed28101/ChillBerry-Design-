@@ -38,26 +38,26 @@ const Social = () => {
     ]
 
     return (
-        <div className="w-full py-20">
+        <section className="w-full py-20">
             <div className="max-w-[1400px] mx-auto flex flex-col items-center justify-center">
 
                 {/* TITLE */}
-                <div className="pb-10 text-center">
-                    <h5 className="px-6 font-Schotis-Bold text-2xl sm:text-3xl tracking-wide">
+                <header className="pb-10 text-center">
+                    <h2 className="px-6 font-Schotis-Bold text-2xl sm:text-3xl tracking-wide">
                         Get Social With @Chillberry
-                    </h5>
-                </div>
+                    </h2>
+                </header>
 
                 {/* CAROUSEL WRAPPER */}
                 <div className="relative w-full">
 
                     {/* CAROUSEL */}
-                    <div
+                    <ul     
                         ref={carouselRef}
-                        className="w-full overflow-hidden scroll-smooth flex"
+                        className="w-full overflow-hidden scroll-smooth flex list-none p-0 m-0"
                     >
                         {images.map((item, index) => (
-                            <div
+                            <li
                                 key={index}
                                 className="
                                     shrink-0
@@ -98,14 +98,15 @@ const Social = () => {
                                         />
                                     </div>
                                 </a>
-                            </div>
+                            </li>
                         ))}
-                    </div>
+                    </ul>
 
                     {/* PREVIOUS BUTTON */}
                     <button
                         type="button"
                         onClick={prevSlide}
+                        aria-label="Previous Slide"
                         className="absolute top-1/2 -translate-y-1/2 left-4 sm:left-6 z-50 cursor-pointer"
                     >
                         <span className="flex items-center justify-center w-10 h-10 rounded-full bg-gray-900 hover:bg-sharp-pink text-white shadow-lg">
@@ -119,6 +120,7 @@ const Social = () => {
                     <button
                         type="button"
                         onClick={nextSlide}
+                        aria-label="Next Slide"
                         className="absolute top-1/2 -translate-y-1/2 right-4 sm:right-6 z-50 cursor-pointer"
                     >
                         <span className="flex items-center justify-center w-10 h-10 rounded-full bg-gray-900 hover:bg-sharp-pink text-white shadow-lg">
@@ -154,12 +156,12 @@ const Social = () => {
                         <img
                             className="h-3 w-3 shrink-0 invert"
                             src="next.svg"
-                            alt="next"
+                            alt=""
                         />
                     </button>
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
 

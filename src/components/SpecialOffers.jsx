@@ -43,23 +43,23 @@ const SpecialOffers = () => {
     if (isExpired) return null
 
     return (
-        <div className='bg-chocolate-brown w-full flex justify-center'>
+        <section className='bg-chocolate-brown w-full flex justify-center'>
 
             {/* MAX WIDTH CONTAINER */}
             <div className='w-full max-w-[1550px] flex flex-col lg:flex-row justify-between items-center px-4 sm:px-8 lg:px-16 xl:px-20 py-10'>
 
                 {/* LEFT */}
-                <div className='flex flex-col w-full max-w-[700px] items-center lg:items-center text-center lg:text-left'>
+                <article className='flex flex-col w-full max-w-[700px] items-center lg:items-center text-center lg:text-left'>
 
                     <p className='font-Mazzard-Regular text-sharp-pink text-sm lg:-translate-x-47'>
                         SPECIAL OFFERS
                     </p>
 
-                    <h5 className='font-Schotis-Bold text-2xl lg:-translate-x-12 sm:text-3xl lg:text-4xl text-white tracking-wide py-4'>
+                    <h2 className='font-Schotis-Bold text-2xl lg:-translate-x-12 sm:text-3xl lg:text-4xl text-white tracking-wide py-4'>
                         Sweet Deals Ending in <br /> Hours
-                    </h5>
+                    </h2>
 
-                    {/* TIMER - FIXED */}
+                    {/* TIMER */}
                     <div className='grid grid-cols-4 gap-2 sm:gap-3 py-6 w-full max-w-[380px] sm:max-w-[470px] lg:max-w-[500px]'>
 
                         {[ 
@@ -72,7 +72,7 @@ const SpecialOffers = () => {
                                 key={index} 
                                 className='h-20 sm:h-28 rounded-2xl flex flex-col justify-center items-center border border-sharp-pink text-sharp-pink font-Schotis-SemiBold tracking-widest text-2xl sm:text-4xl lg:text-5xl'
                             >
-                                {item.value}
+                                <time className="contents">{item.value}</time>
                                 <span className='font-Mazzard-Regular text-[12px] sm:text-xs text-gray-400 tracking-wider lg:mt-3  mt-2'>
                                     {item.label}
                                 </span>
@@ -98,21 +98,21 @@ const SpecialOffers = () => {
                         </button>
                     </div>
 
-                </div>
+                </article>
 
                 {/* RIGHT IMAGE */}
-                <div className='relative w-full lg:w-[45%] h-[300px] sm:h-[400px] lg:h-[500px] mt-10 lg:mt-0 hidden lg:block'>
+                <figure className='relative w-full lg:w-[45%] h-[300px] sm:h-[400px] lg:h-[500px] mt-10 lg:mt-0 hidden lg:block'>
                     <div className='absolute right-0 top-1/2 -translate-y-1/2'>
                         <img
                             src="/images/section4/glass.png"
-                            alt="ice cream"
+                            alt="Ice cream special offer"
                             className="max-w-[360px] xl:max-w-[450px] object-contain"
                         />
                     </div>
-                </div>
+                </figure>
 
             </div>
-        </div>
+        </section>
     )
 }
 

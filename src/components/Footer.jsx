@@ -4,47 +4,46 @@ const Footer = () => {
   return (
     <footer className="bg-blackish relative overflow-hidden">
 
-      {/* Diagonal Box — lg+ only */}
-      <section className='diagonalbox absolute right-0 py-3.5 hidden lg:block'>
+      {/* Decorative Diagonal Box — lg+ only */}
+      <div className='diagonalbox absolute right-0 py-3.5 hidden lg:block' aria-hidden="true">
         <div className='diagonal bg-lightblack px-47 py-26 rounded-3xl -rotate-22 translate-x-40'></div>
-      </section>
+      </div>
 
-      <main className="w-full ">
+      {/* Container for Footer Content */}
+      <div className="w-full">
 
         {/* Constrained Content */}
         <div className="max-w-7xl mx-auto px-6">
 
-          {/* Logo */}
+          {/* Logo Section */}
           <div className="flex justify-center py-7">
-            <section className="flex flex-col items-center">
-              <img className="h-20 w-20 block" src="logo.png" alt="" />
+            <div className="flex flex-col items-center">
+              <img className="h-20 w-20 block" src="logo.png" alt="Chillberry Logo" />
               <div className="flex text-3xl tracking-wider">
                 <span className="font-Schotis-Bold text-white">Chill</span>
                 <span className="font-Schotis-Bold text-sharp-pink">berry</span>
               </div>
-            </section>
+            </div>
           </div>
 
-          {/* Navigation */}
-          <section className="hidden lg:flex justify-center py-13">
-            <ul className="text-white">
-              <li className="flex gap-8 font-Mazzard-Regular text-sm">
-                <a className="hover:text-sharp-pink transition-all" href="/">Home</a>
-                <a className="hover:text-sharp-pink transition-all" href="about-us">About Us</a>
-                <a className="hover:text-sharp-pink transition-all" href="our-flavors">Our Flavors</a>
-                <a className="hover:text-sharp-pink transition-all" href="gallery">Gallery</a>
-                <a className="hover:text-sharp-pink transition-all" href="testimonials">Testimonials</a>
-                <a className="hover:text-sharp-pink transition-all" href="contact">Contact</a>
-              </li>
+          {/* Navigation Section */}
+          <nav className="hidden lg:flex justify-center py-13" aria-label="Footer Navigation">
+            <ul className="text-white flex gap-8 font-Mazzard-Regular text-sm">
+              <li><a className="hover:text-sharp-pink transition-all" href="/">Home</a></li>
+              <li><a className="hover:text-sharp-pink transition-all" href="about-us">About Us</a></li>
+              <li><a className="hover:text-sharp-pink transition-all" href="our-flavors">Our Flavors</a></li>
+              <li><a className="hover:text-sharp-pink transition-all" href="gallery">Gallery</a></li>
+              <li><a className="hover:text-sharp-pink transition-all" href="testimonials">Testimonials</a></li>
+              <li><a className="hover:text-sharp-pink transition-all" href="contact">Contact</a></li>
             </ul>
-          </section>
+          </nav>
 
         </div>
 
         {/* FULL WIDTH DIVIDER */}
         <hr className="border-t border-white/20 w-full hidden lg:block" />
 
-        {/* Bottom Section */}
+        {/* Bottom Bar */}
         <div className="max-w-7xl mx-auto px-6">
 
           <div
@@ -52,7 +51,6 @@ const Footer = () => {
               flex flex-col
               gap-8
               text-center
-
               lg:flex-row
               lg:items-center
               lg:justify-between
@@ -62,15 +60,15 @@ const Footer = () => {
             "
           >
 
-            {/* Left */}
-            <section className="text-white">
+            {/* Copyright */}
+            <div className="text-white">
               <p className="text-sm lg:px-20">
                 © 2026 Chillberry. All rights reserved.
               </p>
-            </section>
+            </div>
 
-            {/* CENTER ICONS (Perfectly Centered on lg) */}
-            <section
+            {/* Social Icons (Perfectly Centered on lg) */}
+            <div
               className="
                 flex justify-center
                 lg:absolute
@@ -79,36 +77,36 @@ const Footer = () => {
               "
             >
               <div className="flex items-center gap-3">
-                <a href='facebook' className='rounded-full p-1.5 bg-lightblack hover:bg-sharp-pink'>
-                  <img className='h-4 w-4 invert' src="linkedin.svg" alt="" />
+                <a href='https://linkedin.com' aria-label="LinkedIn" className='rounded-full p-1.5 bg-lightblack hover:bg-sharp-pink'>
+                  <img className='h-4 w-4 invert' src="linkedin.svg" alt="" aria-hidden="true" />
                 </a>
 
-                <a href='facebook' className='rounded-full p-1.5 bg-lightblack hover:bg-sharp-pink'>
-                  <img className='h-4 w-4 invert' src="insta3.svg" alt="" />
+                <a href='https://instagram.com' aria-label="Instagram" className='rounded-full p-1.5 bg-lightblack hover:bg-sharp-pink'>
+                  <img className='h-4 w-4 invert' src="insta3.svg" alt="" aria-hidden="true" />
                 </a>
 
-                <a href='facebook' className='rounded-full p-1.5 bg-lightblack hover:bg-sharp-pink'>
-                  <img className='h-4 w-4 invert' src="tiktok.svg" alt="" />
+                <a href='https://tiktok.com' aria-label="TikTok" className='rounded-full p-1.5 bg-lightblack hover:bg-sharp-pink'>
+                  <img className='h-4 w-4 invert' src="tiktok.svg" alt="" aria-hidden="true" />
                 </a>
 
-                <a href='facebook' className='rounded-full p-1.5 bg-lightblack hover:bg-sharp-pink'>
-                  <img className='h-4 w-4 invert' src="youtube.svg" alt="" />
+                <a href='https://youtube.com' aria-label="YouTube" className='rounded-full p-1.5 bg-lightblack hover:bg-sharp-pink'>
+                  <img className='h-4 w-4 invert' src="youtube.svg" alt="" aria-hidden="true" />
                 </a>
               </div>
-            </section>
+            </div>
 
-            {/* Right */}
-            <section className="text-white">
+            {/* Credits */}
+            <div className="text-white">
               <p className="text-sm lg:-translate-x-40">
                 By Ali Ahmed
               </p>
-            </section>
+            </div>
 
           </div>
 
         </div>
 
-      </main>
+      </div>
     </footer>
   )
 }

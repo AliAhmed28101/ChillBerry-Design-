@@ -8,7 +8,8 @@ const Gallery = () => {
         const container = carouselRef.current
         if (!container) return 0
 
-        const firstCard = container.querySelector("section")
+        // Updated selector to match the new semantic li tag
+        const firstCard = container.querySelector("li")
         if (!firstCard) return 0
 
         const cardWidth = firstCard.offsetWidth
@@ -62,34 +63,34 @@ const Gallery = () => {
     ]
 
     return (
-        <main className='w-full bg-baby-pink'>
+        <section className='w-full bg-baby-pink'>
 
             <div className='flex flex-col py-10 items-center px-8 pb-10 justify-center '>
 
                 {/* Heading */}
-                <div className='flex items-center justify-center'>
-                    <section>
-                        <p className='font-Mazzard-Regular text-sharp-pink text-xs sm:text-sm uppercase text-center'>
+                <header className='flex items-center justify-center'>
+                    <div className="text-center">
+                        <p className='font-Mazzard-Regular text-sharp-pink text-xs sm:text-sm uppercase'>
                             GALLERY
                         </p>
 
                         <div className='py-3.5'>
-                            <h5 className='font-Schotis-Bold text-2xl sm:text-3xl tracking-wide px-2 sm:px-4 md:px-8 whitespace-nowrap text-center'>
+                            <h2 className='font-Schotis-Bold text-2xl sm:text-3xl tracking-wide px-2 sm:px-4 md:px-8 whitespace-nowrap'>
                                 Ice Cream Moments
-                            </h5>
+                            </h2>
                         </div>
-                    </section>
-                </div>
+                    </div>
+                </header>
 
                 {/* Carousel Wrapper */}
-                <div className="relative  w-full xl:max-w-[1550px] mx-auto px-4 sm:px-1  md:px-0  lg:px-1 xl:px-0 2xl:px-19 py-5 ">
+                <div className="relative w-full xl:max-w-[1550px] mx-auto px-4 sm:px-1 md:px-0 lg:px-1 xl:px-0 2xl:px-19 py-5 ">
 
-                    <div
+                    <ul
                         ref={carouselRef}
-                        className="w-full flex gap-4 overflow-x-auto scroll-smooth scrollbar-hide"
+                        className="w-full flex gap-4 overflow-x-auto scroll-smooth scrollbar-hide list-none"
                     >
                         {images.map((item, index) => (
-                            <section
+                            <li
                                 key={index}
                                 className="flex-shrink-0
                                            basis-[100%]
@@ -101,7 +102,6 @@ const Gallery = () => {
                                            aspect-square
                                            h-100
                                            sm:h-65
-                            
                                            rounded-2xl overflow-hidden"
                             >
                                 <a
@@ -112,13 +112,13 @@ const Gallery = () => {
                                 >
                                     <img
                                         src={item.img}
-                                        alt=""
+                                        alt={item.heading}
                                         draggable="false"
                                         className="w-full h-full object-cover transition-transform duration-300 md:group-hover:scale-105"
                                     />
 
                                     <div className="absolute bottom-9 sm:bottom-5 left-4 right-4 z-20 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                        <span className="bg-lightblack/60 px-2 py-1 text-2xl sm:text-lg md:text-lg lg:text-lg   rounded-md font-Schotis-SemiBold tracking-wider">
+                                        <span className="bg-lightblack/60 px-2 py-1 text-2xl sm:text-lg md:text-lg lg:text-lg rounded-md font-Schotis-SemiBold tracking-wider">
                                             {item.heading}
                                         </span>
 
@@ -129,15 +129,16 @@ const Gallery = () => {
 
                                     <div className="absolute inset-0 bg-black/55 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                                 </a>
-                            </section>
+                            </li>
                         ))}
-                    </div>
+                    </ul>
 
                     {/* Left Button */}
                     <button
                         type="button"
                         onClick={prevSlide}
-                        className="absolute top-1/2 -translate-y-1/2 -translate-x-1  sm:-translate-x-4  lg:-translate-x-3 xl:-translate-x-4 2xl:translate-x-15 left-0 z-50 cursor-pointer"
+                        aria-label="Previous image"
+                        className="absolute top-1/2 -translate-y-1/2 -translate-x-1 sm:-translate-x-4 lg:-translate-x-3 xl:-translate-x-4 2xl:translate-x-15 left-0 z-50 cursor-pointer"
                     >
                         <span className="flex items-center justify-center w-12 h-12 sm:w-9 sm:h-9 rounded-full bg-gray-900 hover:bg-sharp-pink text-white shadow-lg">
                             <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -150,6 +151,7 @@ const Gallery = () => {
                     <button
                         type="button"
                         onClick={nextSlide}
+                        aria-label="Next image"
                         className="absolute top-1/2 -translate-y-1/2 right-0 translate-x-2 sm:translate-x-1 xl:translate-x-4 2xl:-translate-x-17 z-50 cursor-pointer"
                     >
                         <span className="flex items-center justify-center w-12 h-12 sm:w-9 sm:h-9 rounded-full bg-gray-900 hover:bg-sharp-pink text-white shadow-lg">
@@ -161,20 +163,20 @@ const Gallery = () => {
                 </div>
 
                 {/* CTA Button */}
-                <section className="py-6 flex justify-center items-center w-full">
+                <div className="py-6 flex justify-center items-center w-full">
                     <button
                         type="button"
                         onClick={() => alert("View Menu")}
                         className="inline-flex items-center justify-center gap-1 font-Mazzard-Regular text-white text-sm bg-sharp-pink px-6 py-2.5 rounded-4xl hover:cursor-pointer"
                     >
                         View Menu
-                        <img className="h-3 invert" src="next.svg" alt="next" />
+                        <img className="h-3 invert" src="next.svg" alt="" aria-hidden="true" />
                     </button>
-                </section>
+                </div>
 
             </div>
 
-        </main>
+        </section>
     )
 }
 

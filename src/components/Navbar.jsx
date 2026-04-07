@@ -32,7 +32,7 @@ const Navbar = () => {
                 <div className="flex items-center gap-4">
 
                     {/* Order Button (≥768px) */}
-                    <div className="hidden md:block  xl:-translate-x-12 2xl:-translate-x-16">
+                    <div className="hidden md:block xl:-translate-x-12 2xl:-translate-x-16">
                         <button
                             type="button"
                             onClick={() => alert("Order Now")}
@@ -44,23 +44,21 @@ const Navbar = () => {
                     </div>
 
                     {/* Hamburger (<1024px) */}
-                    <div className="lg:hidden">
-                        <button onClick={() => setIsOpen(!isOpen)}>
-                            <svg
-                                className="w-9 h-9 text-sharp-pink translate-y-1"
-                                fill="none"
-                                stroke="currentColor"
-                                viewBox="0 0 24 24"
-                            >
-                                <path
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    strokeWidth="2"
-                                    d="M4 6h16M4 12h16M4 18h16"
-                                />
-                            </svg>
-                        </button>
-                    </div>
+                    <button className="lg:hidden" onClick={() => setIsOpen(!isOpen)}>
+                        <svg
+                            className="w-9 h-9 text-sharp-pink translate-y-1"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                        >
+                            <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth="2"
+                                d="M4 6h16M4 12h16M4 18h16"
+                            />
+                        </svg>
+                    </button>
 
                 </div>
             </nav>
@@ -83,19 +81,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-
-

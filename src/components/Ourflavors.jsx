@@ -30,7 +30,7 @@ const Ourflavors = () => {
   ];
 
   return (
-    <main className="w-full bg-baby-pink pt-14 sm:pt-16 px-4 flex flex-col items-center h-full pb-7">
+    <section className="w-full bg-baby-pink pt-14 sm:pt-16 px-4 flex flex-col items-center h-full pb-7">
       <header className="text-center max-w-3xl ">
         <p className="font-Mazzard-Regular text-sharp-pink text-xs sm:text-sm uppercase">
           OUR FLAVORS
@@ -42,12 +42,12 @@ const Ourflavors = () => {
 
       <div className="relative w-full max-w-[1400px] px-8 sm:px-12 lg:px-20 mx-auto py-8">
 
-        <div
+        <ul
           ref={carouselRef}
-          className="w-full overflow-x-auto flex scroll-smooth gap-6 snap-x snap-mandatory scrollbar-hide"
+          className="w-full overflow-x-auto flex scroll-smooth gap-6 snap-x snap-mandatory scrollbar-hide list-none"
         >
           {images.map((item, index) => (
-            <div
+            <li
               key={index}
               className="shrink-0 flex flex-col snap-start
                 w-full 
@@ -55,12 +55,12 @@ const Ourflavors = () => {
                 lg:w-[calc((100%-3rem)/3)] 
                 xl:w-[calc((100%-4.5rem)/4)]"
             >
-              <div className="bg-white group/card flex justify-center items-center cursor-pointer h-72 sm:h-80 lg:h-92 xl:h-100 2xl:h-110 relative overflow-hidden rounded-lg">
+              <article className="bg-white group/card flex justify-center items-center cursor-pointer h-72 sm:h-80 lg:h-92 xl:h-100 2xl:h-110 relative overflow-hidden rounded-lg">
 
                 {item.sale && (
-                  <div className="absolute left-3 top-3 bg-sharp-pink text-white h-5.5 px-3 rounded-2xl flex items-center justify-center font-Schotis-Light text-sm z-30 pointer-events-none">
+                  <span className="absolute left-3 top-3 bg-sharp-pink text-white h-5.5 px-3 rounded-2xl flex items-center justify-center font-Schotis-Light text-sm z-30 pointer-events-none">
                     {item.sale}
-                  </div>
+                  </span>
                 )}
 
 
@@ -91,20 +91,22 @@ const Ourflavors = () => {
                   </div>
                 </div>
 
-                <img
-                  src={item.img}
-                  alt={item.name}
-                  draggable="false"
-                  className="w-52 sm:w-55 lg:w-60 xl:w-63 2xl:w-66
-                             h-52 sm:h-55 lg:h-60 xl:h-63 2xl:h-66
-                             object-cover z-10
-                             group-hover/card:scale-105
-                             transition-transform duration-500 translate-y-4"
-                />
-              </div>
+                <figure className="contents">
+                  <img
+                    src={item.img}
+                    alt={item.name}
+                    draggable="false"
+                    className="w-52 sm:w-55 lg:w-60 xl:w-63 2xl:w-66
+                                 h-52 sm:h-55 lg:h-60 xl:h-63 2xl:h-66
+                                 object-cover z-10
+                                 group-hover:scale-105
+                                 transition-transform duration-500 translate-y-4"
+                  />
+                </figure>
+              </article>
 
               <div className="py-6 flex flex-col items-center">
-                <p className="font-Schotis-Bold text-base sm:text-lg">{item.name}</p>
+                <h3 className="font-Schotis-Bold text-base sm:text-lg">{item.name}</h3>
 
                 <div className="flex gap-0.5 py-2">
                   {[1, 2, 3, 4, 5].map((star) => (
@@ -128,22 +130,20 @@ const Ourflavors = () => {
                   </span>
                 </div>
               </div>
-            </div>
+            </li>
           ))}
-        </div>
+        </ul>
 
         {/* Left Button */}
         <button onClick={() => scroll('prev')} className="absolute top-1/2 -translate-y-20 -translate-x-2.5 sm:-translate-x-0 left-0 sm:left-0 md:left-5 z-50 p-2 rounded-full border border-gray-900 group cursor-pointer hover:border-sharp-pink bg-baby-pink/50 backdrop-blur-sm sm:bg-transparent">
-
           <svg className="sm:w-5 sm:h-5 w-3.5 h-3.5 text-gray-900 group-hover:text-sharp-pink" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7" /> </svg>
-
         </button>
         {/* Right Button */}
         <button onClick={() => scroll('next')} className="absolute top-1/2 -translate-y-20 translate-x-2.5 sm:translate-x-0 right-0 sm:right-0 md:right-5 z-50 p-2 rounded-full border border-gray-900 cursor-pointer group hover:border-sharp-pink bg-baby-pink/50 backdrop-blur-sm sm:bg-transparent">
           <svg className="sm:w-5 sm:h-5 w-3.5 h-3.5 text-gray-900 group-hover:text-sharp-pink" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" /> </svg>
         </button>
       </div>
-    </main>
+    </section>
   );
 };
 
