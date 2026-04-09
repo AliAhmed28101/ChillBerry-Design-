@@ -14,7 +14,7 @@ const Contactus = () => {
     };
 
     return (
-        <main className='relative flex flex-col w-full overflow-hidden min-h-screen'>
+        <main id='contact' className='relative flex flex-col w-full overflow-hidden min-h-screen'>
             {/* Background Layer - Decorative only */}
             <div
                 className='absolute inset-0 bg-no-repeat bg-cover bg-center opacity-80'

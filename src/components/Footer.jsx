@@ -30,11 +30,11 @@ const Footer = () => {
           <nav className="hidden lg:flex justify-center py-13" aria-label="Footer Navigation">
             <ul className="text-white flex gap-8 font-Mazzard-Regular text-sm">
               <li><a className="hover:text-sharp-pink transition-all" href="/">Home</a></li>
-              <li><a className="hover:text-sharp-pink transition-all" href="about-us">About Us</a></li>
-              <li><a className="hover:text-sharp-pink transition-all" href="our-flavors">Our Flavors</a></li>
-              <li><a className="hover:text-sharp-pink transition-all" href="gallery">Gallery</a></li>
-              <li><a className="hover:text-sharp-pink transition-all" href="testimonials">Testimonials</a></li>
-              <li><a className="hover:text-sharp-pink transition-all" href="contact">Contact</a></li>
+              <li><a className="hover:text-sharp-pink transition-all" href="/about-us">About Us</a></li>
+              <li><a className="hover:text-sharp-pink transition-all" href="#our-flavors">Our Flavors</a></li>
+              <li><a className="hover:text-sharp-pink transition-all" href="#gallery">Gallery</a></li>
+              <li><a className="hover:text-sharp-pink transition-all" href="#testimonials">Testimonials</a></li>
+              <li><a className="hover:text-sharp-pink transition-all" href="#contact">Contact</a></li>
             </ul>
           </nav>
 
@@ -77,19 +77,19 @@ const Footer = () => {
               "
             >
               <div className="flex items-center gap-3">
-                <a href='https://linkedin.com' aria-label="LinkedIn" className='rounded-full p-1.5 bg-lightblack hover:bg-sharp-pink'>
+                <a href='https://linkedin.com' target='blank' aria-label="LinkedIn" className='rounded-full p-1.5 bg-lightblack hover:bg-sharp-pink'>
                   <img className='h-4 w-4 invert' src="linkedin.svg" alt="" aria-hidden="true" />
                 </a>
 
-                <a href='https://instagram.com' aria-label="Instagram" className='rounded-full p-1.5 bg-lightblack hover:bg-sharp-pink'>
+                <a href='https://instagram.com' target='blank' aria-label="Instagram" className='rounded-full p-1.5 bg-lightblack hover:bg-sharp-pink'>
                   <img className='h-4 w-4 invert' src="insta3.svg" alt="" aria-hidden="true" />
                 </a>
 
-                <a href='https://tiktok.com' aria-label="TikTok" className='rounded-full p-1.5 bg-lightblack hover:bg-sharp-pink'>
+                <a href='https://tiktok.com' target='blank' aria-label="TikTok" className='rounded-full p-1.5 bg-lightblack hover:bg-sharp-pink'>
                   <img className='h-4 w-4 invert' src="tiktok.svg" alt="" aria-hidden="true" />
                 </a>
 
-                <a href='https://youtube.com' aria-label="YouTube" className='rounded-full p-1.5 bg-lightblack hover:bg-sharp-pink'>
+                <a href='https://youtube.com' target='blank' aria-label="YouTube" className='rounded-full p-1.5 bg-lightblack hover:bg-sharp-pink'>
                   <img className='h-4 w-4 invert' src="youtube.svg" alt="" aria-hidden="true" />
                 </a>
               </div>

@@ -21,10 +21,10 @@ const Navbar = () => {
                     <ul className="flex gap-8 font-Mazzard-Regular text-sm whitespace-nowrap">
                         <li><a className="hover:text-sharp-pink transition" href="/">Home</a></li>
                         <li><a className="hover:text-sharp-pink transition" href="/about-us">About Us</a></li>
-                        <li><a className="hover:text-sharp-pink transition" href="/our-flavors">Our Flavors</a></li>
-                        <li><a className="hover:text-sharp-pink transition" href="/gallery">Gallery</a></li>
-                        <li><a className="hover:text-sharp-pink transition" href="/testimonials">Testimonials</a></li>
-                        <li><a className="hover:text-sharp-pink transition" href="/contact">Contact</a></li>
+                        <li><a className="hover:text-sharp-pink transition" href="#our-flavors">Our Flavors</a></li>
+                        <li><a className="hover:text-sharp-pink transition" href="#gallery">Gallery</a></li>
+                        <li><a className="hover:text-sharp-pink transition" href="#testimonials">Testimonials</a></li>
+                        <li><a className="hover:text-sharp-pink transition" href="#contact">Contact</a></li>
                     </ul>
                 </div>
 
@@ -69,10 +69,10 @@ const Navbar = () => {
                     <ul className="flex flex-col gap-4 font-Mazzard-Regular text-sm text-sharp-pink">
                         <li><a href="/">Home</a></li>
                         <li><a href="/about-us">About Us</a></li>
-                        <li><a href="/our-flavors">Our Flavors</a></li>
-                        <li><a href="/gallery">Gallery</a></li>
-                        <li><a href="/testimonials">Testimonials</a></li>
-                        <li><a href="/contact">Contact</a></li>
+                        <li><a href="#our-flavors">Our Flavors</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
             )}

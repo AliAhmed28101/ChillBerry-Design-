@@ -63,7 +63,7 @@ const Gallery = () => {
     ]
 
     return (
-        <section className='w-full bg-baby-pink'>
+        <section id='gallery' className='w-full bg-baby-pink'>
 
             <div className='flex flex-col py-10 items-center px-8 pb-10 justify-center '>
 

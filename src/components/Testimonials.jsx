@@ -42,7 +42,7 @@ const Testimonials = () => {
     };
 
     return (
-        <section className="max-w-[1400px] mx-auto md:h-auto lg:h-[650px] relative overflow-hidden">
+        <section id='testimonials' className="max-w-[1400px] mx-auto md:h-auto lg:h-[650px] relative overflow-hidden">
             {/* Background Curved Image */}
             <figure className="left-0 max-w-[800px] max-h-[530px] md:max-w-[620px] md:h-[420px] lg:max-w-[670px] lg:h-[450px] xl:max-w-[750px] xl:h-[500px] hidden md:block rounded-e-full translate-y-20 md:translate-y-25 absolute overflow-hidden -translate-x-40 md:-translate-x-48">
                 <img
