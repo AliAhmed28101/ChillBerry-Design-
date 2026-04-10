@@ -11,7 +11,7 @@ import Ourstory from "./components/Ourstory"
 import Social from "./components/Social"
 import SpecialOffers from "./components/SpecialOffers"
 import Testimonials from "./components/Testimonials"
-import Errorpage from "../Pages/errorpage"
+import Errorpage from "../Pages/Errorpage"
 
 
 

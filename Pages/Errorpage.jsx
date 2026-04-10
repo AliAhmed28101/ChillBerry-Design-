@@ -33,7 +33,7 @@ const ErrorPage = () => {
             <button
               type="button"
               onClick={() => navigate("/")}
-              className="flex items-center justify-center gap-2 font-Mazzard-Regular text-white text-sm bg-sharp-pink hover:opacity-95 px-10 py-3 rounded-full transition-all cursor-pointer"
+              className="flex items-center justify-center gap-2 font-Mazzard-Regular text-white text-sm bg-sharp-pink hover:opacity-95 px-6 py-3 rounded-full transition-all cursor-pointer"
             >
               BACK TO PARLOR!
             </button>

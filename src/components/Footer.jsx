@@ -98,7 +98,7 @@ const Footer = () => {
             {/* Credits */}
             <div className="text-white">
               <p className="text-sm lg:-translate-x-40">
-                By Ali Ahmed
+                Product by Ali Ahmed
               </p>
             </div>
 

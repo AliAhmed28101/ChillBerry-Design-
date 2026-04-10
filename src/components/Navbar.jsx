@@ -66,7 +66,7 @@ const Navbar = () => {
             {/* Mobile / Tablet Dropdown */}
             {isOpen && (
                 <div className="lg:hidden bg-baby-pink border-t border-pink-200 px-6 py-4">
-                    <ul className="flex flex-col gap-4 font-Mazzard-Regular text-sm text-sharp-pink">
+                    <ul className="flex flex-col justify-center items-center gap-4 font-Mazzard-Regular text-sm text-sharp-pink">
                         <li><a href="/">Home</a></li>
                         <li><a href="/about-us">About Us</a></li>
                         <li><a href="#our-flavors">Our Flavors</a></li>
