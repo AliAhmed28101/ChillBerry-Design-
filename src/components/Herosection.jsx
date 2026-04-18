@@ -101,7 +101,7 @@ const Herosection = () => {
                 <section className='hidden md:flex flex-row items-center justify-between
                                 gap-4 lg:gap-8 xl:gap-12
                                 px-8 md:px-10 lg:px-16 xl:px-20 2xl:px-28
-                                py-8 md:py-10 lg:py-6 lg:pt-3 xl:py-16  md:pb-25 lg:pb-0 xl:pb-0'
+                                py-8 md:py-10 lg:py-6 lg:pt-3 xl:py-16  md:pb-23 lg:pt-30 xl:pt-60 lg:h-[600px] xl:h-[700px]'
                          aria-labelledby="hero-heading-desktop">
 
                     {/*LEFT CONTENT*/}
@@ -172,12 +172,12 @@ const Herosection = () => {
 
                         <div className='relative bg-light-cement 
                                         rounded-[50px] md:rounded-[60px] lg:rounded-[80px] xl:rounded-[95px]
-                                        w-full h-[300px]  md:h-[350px] lg:h-[500px] xl:h-[570px] lg:-translate-y-10 xl:-translate-y-20'>
+                                        w-full h-[300px]  md:h-[330px] lg:h-[400px] xl:h-[470px] lg:-translate-y-12 xl:-translate-y-30'>
 
                             <img
                                 key={ActiveItem}
                                 className='absolute bottom-0 md:-bottom-2 left-1/2 -translate-x-1/2
-                                           w-[90%]  md:w-[82%] lg:w-[90%] xl:w-[95%] md:translate-y-7 xl:translate-y-13
+                                           w-[90%]  md:w-[76%] lg:w-[78%] xl:w-[80%] md:translate-y-5  xl:translate-y-7
                                            object-contain
                                            transition-all duration-300'
                                 src={images[ActiveItem]}
